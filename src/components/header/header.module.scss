@@ -1,0 +1,166 @@
+@import "../../styles/config.scss";
+@import "../../styles/settings.scss";
+
+.headerContainer {
+    background: $accentWhite;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    header {
+        @include flex(row, space-between);
+        align-items: center;
+        background: $accentWhite;
+        font-family: lato, sans-serif;
+        height: $headerHeightMobile;
+        margin: 0 auto;
+        max-width: 800px;
+        padding: 20px 10px;
+        width: 90%;
+        z-index: 2;
+        h1 {
+            padding-top: 10px;
+            margin: 0;
+            a {
+                color: $lightBlue;
+                font-size: 1.5rem;
+                font-weight: bold;
+                line-height: 1.1;
+                img {
+                    margin-left: -25px;
+                    width: 180px;
+                }
+            }
+        }
+        nav {
+            .burger {
+                @include flex(column, center);
+                align-self: center;
+                cursor: pointer;
+                margin: 2px;
+                padding: 5px;
+                div {
+                    background: $mediumGrey;
+                    height: 3px;
+                    margin: 2px;
+                    transition: all 400ms ease-in-out;
+                    width: 30px;
+                }
+                -webkit-tap-highlight-color: transparent;
+            }
+            .toggle1 {
+                transform: rotate(-45deg) translate(-3px, 7.5px);
+            }
+            .toggle2 {
+                opacity: 0;
+            }
+            .toggle3 {
+                transform: rotate(45deg) translate(-3px, -7.5px);
+            }
+            ul {
+                display: none;
+                list-style: none;
+                margin: auto;
+                li {
+                    margin: auto;
+                    a {
+                        border-bottom: solid 2px rgba($accentWhite, 0);
+                        color: $mediumGrey;
+                        margin: 1.5rem;
+                        padding-bottom: 2px;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        transition: border 200ms ease-in-out, color 200ms ease-in-out;
+                        &:hover {
+                            border-bottom: solid 2px rgba($mediumGrey, 1);
+                        }
+                    }
+                }
+                li:last-child {
+                    margin-right: -1.5rem;
+                }
+            }
+        }
+    }
+    #navSlider {
+        background: $accentWhite;
+        box-shadow: 0px 2px 6px rgba($shadowGrey,0.2);
+        margin: auto;
+        position: fixed;
+        transition: top 400ms ease-in-out;
+        width: 100%;
+        z-index: 1;
+        ul {
+            @include flex(column, center);
+            align-items: center;
+            height: 200px;
+            list-style: none;
+            margin: 0;
+            li {
+                margin: 15px;
+                a {
+                    border-bottom: solid 2px rgba($accentWhite, 0);
+                    color: $mediumGrey;
+                    margin: 10px;
+                    padding-bottom: 2px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    transition: border 200ms ease-in-out;
+                    &:hover {
+                        border-bottom: solid 2px rgba($mediumGrey, 1);
+                    }
+                }
+            }
+        }
+    }
+    .slideUp {
+        top: -240px - $headerHeightMobile;
+    }
+    .slideDown {
+        top: $headerHeightMobile;
+    }
+}
+
+html:not([data-scroll="0"]) {
+    .headerContainer {
+        box-shadow: 0px 2px 6px rgba($shadowGrey,0.2);
+    }
+}
+
+@media (min-width: 768px) and (min-height: 415px) {
+    .headerContainer {
+        @include flex(row, center);
+        header {
+            height: $headerHeight;
+            padding: 0;
+            h1 a {
+                font-size: 1.8rem;
+                img {
+                    margin-left: -30px;
+                    width: 210px;
+                }
+            }
+            nav {
+                .burger {
+                    display: none;
+                }
+                ul {
+                    @include flex(row, center);
+                    align-items: center;
+                }
+            }
+        }
+    }
+    .slideUp {
+        top: -240px - $headerHeight;
+    }
+    .slideDown {
+        top: $headerHeight;
+    }
+}
+
+@media (min-width: 1024px) {
+    .headerContainer header {
+        max-width: 1200px;
+        width: 80%;
+    }
+}

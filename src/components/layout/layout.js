@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 // import Footer from "../footer/footer";
-// import Header from "../header/header"
+import Header from "../header/header"
 import "../../styles/config.scss";
 import "./layout.module.scss";
 
 const Layout = ({ children }) => {
   return (
     <>
-      {/* <Header/> */}
+      <Header/>
       <div>
         <main>{children}</main>
         {/* <Footer /> */}

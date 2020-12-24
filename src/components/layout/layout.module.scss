@@ -1,0 +1,9 @@
+@import "../../styles/settings.scss";
+
+section {
+    min-height: 100vh;
+}
+
+.intro {
+    padding-top: $headerHeight;
+}
