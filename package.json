@@ -1,8 +1,8 @@
 {
-  "name": "my-gatsby-site",
+  "name": "portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "My Gatsby site",
+  "description": "Web Development Portfolio",
   "author": "Austen Turner",
   "keywords": [
     "gatsby"
