@@ -1,0 +1,41 @@
+@import "../../styles/config.scss";
+@import "../../styles/settings.scss";
+
+footer {
+    background: $darkGrey;
+    border-top: 1px solid $mediumGrey;
+    .footerLinks, .socialLinks {
+        @include flex(row, space-between);
+        margin: 30px auto;
+    }
+    .footerLinks {
+        width: 80%;
+        li a {
+            color: $accentWhite;
+            font-size: 0.8em;
+            text-align: center;
+        }
+    }
+    .socialLinks {
+        width: 60%;
+        li a img {
+            width: 30px;
+        }
+    }
+    p {
+        font-size: 0.8em;
+        margin: 30px auto;
+        text-align: center;
+    }
+}
+
+@media (min-width: 480px) {
+    footer {
+        .footerLinks {
+            width: 450px;
+        }
+        .socialLinks {
+            width: 280px;
+        }
+    }
+}

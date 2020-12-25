@@ -7,3 +7,9 @@ section {
 .intro {
     padding-top: $headerHeight;
 }
+
+@media (min-width: 769px) and (min-height: 481px) {
+    section {
+        width: 80%;
+    }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import Footer from "../footer/footer";
+import Footer from "../footer/Footer";
 import Header from "../header/Header";
 import "../../styles/config.scss";
 import "./layout.module.scss";
@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
       <Header/>
       <div>
         <main>{children}</main>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </>
   )

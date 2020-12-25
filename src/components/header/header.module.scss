@@ -55,15 +55,14 @@
                 li {
                     margin: auto;
                     a {
-                        border-bottom: solid 2px rgba($accentWhite, 0);
+                        border-bottom: solid 1.5px rgba($accentWhite, 0);
                         color: $accentWhite;
                         margin: 1.5rem;
                         padding-bottom: 2px;
                         text-decoration: none;
-                        // text-transform: uppercase;
                         transition: border 200ms ease-in-out, color 200ms ease-in-out;
                         &:hover {
-                            border-bottom: solid 2px rgba($accentWhite, 1);
+                            border-bottom: solid 1.5px rgba($accentWhite, 1);
                         }
                     }
                 }
@@ -90,15 +89,14 @@
             li {
                 margin: 15px;
                 a {
-                    border-bottom: solid 2px rgba($accentWhite, 0);
+                    border-bottom: solid 1.5px rgba($accentWhite, 0);
                     color: $accentWhite;
                     margin: 10px;
                     padding-bottom: 2px;
                     text-decoration: none;
-                    // text-transform: uppercase;
                     transition: border 200ms ease-in-out;
                     &:hover {
-                        border-bottom: solid 2px rgba($accentWhite, 1);
+                        border-bottom: solid 1.5px rgba($accentWhite, 1);
                     }
                 }
             }
@@ -118,12 +116,13 @@ html:not([data-scroll="0"]) {
     }
 }
 
-@media (min-width: 768px) and (min-height: 415px) {
+@media (min-width: 769px) and (min-height: 480px) {
     .headerContainer {
         @include flex(row, center);
         header {
             height: $headerHeight;
             padding: 0;
+            width: 80%;
             .logo {
                 font-size: 1.8rem;
             }
