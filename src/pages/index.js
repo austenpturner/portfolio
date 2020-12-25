@@ -9,13 +9,13 @@ const IndexPage = () => {
         <h1>Hello!</h1>
       </section>
       <section className={styles.about} id="about">
-        <h1>Hello!</h1>
+        <h1>About</h1>
       </section>
       <section className={styles.portfolio} id="portfolio">
-        <h1>Hello!</h1>
+        <h1>Portfolio</h1>
       </section>
       <section className={styles.contact} id="contact">
-        <h1>Hello!</h1>
+        <h1>Contact</h1>
       </section>
     </Layout>
   )

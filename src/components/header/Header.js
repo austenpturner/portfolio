@@ -1,4 +1,4 @@
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 import React, { useState, useEffect } from "react";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import navItems from "../../content/navigation";
@@ -39,11 +39,7 @@ function Header() {
   return (
     <div className={styles.headerContainer}>
       <header>
-        <h1>
-          <Link to="/">
-            Austen Turner
-          </Link>
-        </h1>
+        <AnchorLink to="/#intro" title="Austen Turner" className={styles.logo}/>
         <nav>
         <ul>
           {navItems.map(({link, title}, index) => {
@@ -65,8 +61,8 @@ function Header() {
         <ul>
           {navItems.map(({link, title}, index) => {
             return (
-              <li key={index}>
-                <AnchorLink to={link} title={title} onClick={() => setNavOpen(false)} />
+              <li key={index} onClick={() => setNavOpen(false)}>
+                <AnchorLink to={link} title={title} />
               </li>
             )
           })}
