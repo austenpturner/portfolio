@@ -6,7 +6,8 @@ section {
 }
 
 aside {
-    left: 2%;
+    display: none;
+    left: 1.5%;
     position: fixed;
     top: 30%;
     z-index: 1;
@@ -34,5 +35,9 @@ aside {
 @media (min-width: 769px) and (min-height: 481px) {
     section {
         width: 80%;
+    }
+
+    aside {
+        display: inline-block;
     }
 }

@@ -4,11 +4,10 @@
 footer {
     background: $darkGrey;
     border-top: 1px solid $mediumGrey;
-    .footerLinks, .socialLinks {
+    .footerLinks {
         @include flex(row, space-between);
         margin: 30px auto;
-    }
-    .footerLinks {
+        max-width: 450px;
         width: 80%;
         li a {
             color: $accentWhite;
@@ -16,11 +15,10 @@ footer {
             text-align: center;
         }
     }
-    .socialLinks {
-        width: 60%;
-        li a img {
-            width: 30px;
-        }
+    div {
+        margin: 30px auto;
+        max-width: 320px;
+        width: 90%;
     }
     p {
         font-size: 0.8em;
@@ -29,13 +27,13 @@ footer {
     }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 769px) and (min-height: 480px) {
     footer {
         .footerLinks {
             width: 450px;
         }
-        .socialLinks {
-            width: 280px;
+        div {
+            display: none;
         }
     }
 }
