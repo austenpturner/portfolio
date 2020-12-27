@@ -18,11 +18,15 @@ body {
 section {
     margin: 0 auto;
     max-width: 1200px;
-    width: 90%;
 }
 
 h1, h2 {
     color: $lightBlue;
+    font-weight: normal;
+}
+
+h2, h3 {
+    color: $accentWhite;
     font-weight: normal;
 }
 

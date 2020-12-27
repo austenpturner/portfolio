@@ -1,7 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Footer from "../footer/Footer";
+
+import SocialLinks from "../socialLinks/SocialLinks";
 import Header from "../header/Header";
+import Footer from "../footer/Footer";
+
 import "../../styles/config.scss";
 import "./layout.module.scss";
 
@@ -10,6 +13,9 @@ const Layout = ({ children }) => {
     <>
       <Header/>
       <div>
+        <aside>
+          <SocialLinks />
+        </aside>
         <main>{children}</main>
         <Footer />
       </div>
