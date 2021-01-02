@@ -1,14 +1,16 @@
 import * as React from "react"
 import Layout from "../components/layout/layout";
 import styles from "../components/layout/layout.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const IndexPage = () => {
   return (
     <Layout>
       <section className={styles.intro} id="intro">
         <h1>Hi, I'm Austen.</h1>
-        <h2>I build and design websites and applications.</h2>
-        <h3>Full Stack Web Developer based in Seattle, WA.</h3>
+        <h2>A Full Stack Web Developer</h2>
+        <FontAwesomeIcon icon={faChevronDown} className={styles.bounce}/>
       </section>
       <section className={styles.about} id="about">
         <h1>About Me</h1>

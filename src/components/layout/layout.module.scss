@@ -6,21 +6,31 @@ section {
 }
 
 aside {
+    background: $mediumGrey;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 0px 0px 0px rgba($shadowGrey, 0);
     display: none;
-    left: 1.5%;
+    left: 0%;
+    padding: 10px 15px;
     position: fixed;
     top: 30%;
+    transition: padding 200ms ease-in-out, box-shadow 200ms ease-in-out;
     z-index: 1;
+    &:hover {
+        box-shadow: 5px 5px 5px rgba($shadowGrey, 0.8);
+        padding: 20px;
+    }
 }
 
 .intro {
+    @include flex(column, center);
     padding-top: $headerHeight;
     h1, h2, h3 {
         margin: 10px auto;
         text-align: center;
     }
     h1 {
-        margin-top: 20%;
+        margin-top: -50px;
         font-size: 2.4rem;
     }
     h2 {
@@ -29,6 +39,24 @@ aside {
     h3 {
         font-size: 1.2rem;
         text-transform: uppercase;
+    }
+    svg {
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        color: $accentWhite;
+        display: block;
+        font-size: 2.4rem;
+        margin: 20px auto;
+        transform-origin: bottom;
+    }
+    .bounce {
+        animation-name: bounce;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes bounce {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(20px); }
+        100% { transform: translateY(0); }
     }
 }
 
