@@ -1,8 +1,15 @@
 import * as React from "react"
 import Layout from "../components/layout/layout";
 import styles from "../components/layout/layout.module.scss";
+// Intro section imports
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+// About section imports
+import aboutContent from "../content/about";
+import AboutImage from "../components/image_files/Me.js";
+import Tab from "../components/tabs/Tab";
+// Portfolio section imports
+import portfolioContent from "../content/portfolio";
 
 const IndexPage = () => {
   return (
@@ -13,13 +20,27 @@ const IndexPage = () => {
         <FontAwesomeIcon icon={faChevronDown} className={styles.bounce}/>
       </section>
       <section className={styles.about} id="about">
-        <h1>About Me</h1>
+        <h2>About Me</h2>
+        <AboutImage />
+        {aboutContent.paragraphs.map((para, index) => {
+          return (
+            <p key={index}>{para}</p>
+          )
+        })}
+        <h3>A few tools and technologies I've been working with lately include:</h3>
+        <div className={styles.toolsContainer}>
+          {aboutContent.tools.map((props, index) => {
+            return (
+              <Tab key={index} {...props}></Tab>
+            )
+          })}
+        </div>
       </section>
       <section className={styles.portfolio} id="portfolio">
-        <h1>Portfolio</h1>
+        <h2>Portfolio</h2>
       </section>
       <section className={styles.contact} id="contact">
-        <h1>Contact</h1>
+        <h2>Contact</h2>
       </section>
     </Layout>
   )
