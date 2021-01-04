@@ -1,18 +1,19 @@
 import * as React from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
 import Layout from "../components/layout/layout";
 import styles from "../components/layout/layout.module.scss";
+
 // Intro section imports
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+
 // About section imports
 import aboutContent from "../content/about";
 import AboutImage from "../components/image_files/Me.js";
 import Tile from "../components/tile/Tile";
+
 // Portfolio section imports
 import portfolioContent from "../content/portfolio";
-import Project from "../components/project/Project";
+import Carousel from "../components/carousel/Carousel";
 
 const IndexPage = () => {
   return (
@@ -41,13 +42,7 @@ const IndexPage = () => {
       </section>
       <section className={styles.portfolio} id="portfolio">
         <h2>Portfolio</h2>
-        <Carousel>
-          {portfolioContent.map((props, index) => {
-            return (
-              <Project key={index} {...props} />
-            )
-          })}
-        </Carousel>
+        <Carousel projects={portfolioContent}/>
       </section>
       <section className={styles.contact} id="contact">
         <h2>Contact</h2>

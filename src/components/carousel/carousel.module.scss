@@ -1,0 +1,39 @@
+@import "../../styles/settings.scss";
+
+.carousel {
+    @include flex(row, center);
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: -2px 2px 8px 3px rgba($shadowGrey, 0.8);
+    height: 600px;
+    position: relative;
+    .arrow {
+        color: $lightBlue;
+        cursor: pointer;
+        font-size: 2.6rem;
+        position: absolute;
+        top: 50%;
+        user-select: none;
+        transition: color 200ms ease-in-out;
+        z-index: 10;
+        &:first-child {
+            left: -60px;
+        }
+        &:nth-child(2) {
+            right: -60px;
+        }
+        &:hover {
+            color: $accentWhite;
+        }
+    }
+    .hidden {
+        height: 600px;
+        opacity: 0;
+        transition-duration: 200ms ease-in-out;
+    }
+    .active {
+        height: 600px;
+        opacity: 1;
+        transition-duration: 200ms;
+    }
+}

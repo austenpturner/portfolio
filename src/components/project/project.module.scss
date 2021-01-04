@@ -1,17 +1,16 @@
 @import "../../styles/settings.scss";
 
 .projectContainer {
-    border: 1px solid $darkGrey;
     background: $darkGrey;
-    height: 640px;
-    padding: 0px 40px;
+    height: 600px;
     .row {
         @include flex(row, space-between);
-        margin: 30px 0px;
+        padding: 20px;
     }
     .row:first-child {
+        padding-top: 30px;
         .column {
-            margin: 30px;
+            margin: 25px;
             h3, p, a {
                 text-align: center;
             }
@@ -21,7 +20,7 @@
             }
             p {
                 font-size: 1rem;
-                margin: 30px auto 20px;
+                margin: 20px auto;
             }
             a {
                 border-bottom: 1px solid rgba($lightBlue, 0);
@@ -42,8 +41,9 @@
         }
     }
     .row:nth-child(2) {
+        padding-top: 0px;
         .column {
-            margin: 0 0 0 10px;
+            margin: 0 0 0 20px;
             h3 {
                 color: $lightBlue;
                 display: inline-block;
@@ -54,13 +54,17 @@
                 list-style: inside;
                 margin: 0 0 0 10px;
                 text-align: left;
+                width: 200px;
                 li {
                     color: $accentWhite;
-                    margin: 10px auto;
+                    margin: 10px 0;
+                    
                 }
             }
         }
         .imgContainer {
+            @include flex(row, flex-end);
+            align-items: flex-end;
             span {
                 img {
                     border: 3px solid rgb(0,0,0);

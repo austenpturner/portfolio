@@ -9,7 +9,9 @@ const Project = ({name, description, github, deployed, tools, featuredImg, suppo
                 <div className={styles.column}>
                     <h3>{name}</h3>
                     <p>{description}</p>
-                    <a href={deployed.link} target="_blank" rel="noreferrer">{deployed.text}</a>
+                    <p>
+                        <a href={deployed.link} target="_blank" rel="noreferrer">{deployed.text}</a>
+                    </p>
                     <a href={github.link} target="_blank" rel="noreferrer">{github.text}</a>
                 </div>
             </div>
