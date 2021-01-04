@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 const TitanFlowUIDesktop = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "titanflow-uiexplainer-desktop.png" }) {
+      file(relativePath: { eq: "titanflow-uiexplainer-desktop.jpg" }) {
         childImageSharp {
           fluid {
             src
