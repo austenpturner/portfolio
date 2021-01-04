@@ -1,14 +1,17 @@
 @import "../../styles/settings.scss";
 
 .projectContainer {
+    border: 1px solid $darkGrey;
+    background: $darkGrey;
+    height: 640px;
+    padding: 0px 40px;
     .row {
         @include flex(row, space-between);
-        // margin: 20px 0px;
+        margin: 30px 0px;
     }
     .row:first-child {
         .column {
-            // @include flex(column, center);
-            margin: 40px 20px;
+            margin: 30px;
             h3, p, a {
                 text-align: center;
             }
@@ -17,15 +20,15 @@
                 margin: 0 auto 30px;
             }
             p {
-                font-size: 1.1rem;
+                font-size: 1rem;
                 margin: 30px auto 20px;
             }
             a {
                 border-bottom: 1px solid rgba($lightBlue, 0);
                 color: $lightBlue;
-                display: block;
+                display: inline-block;
                 font-size: 1rem;
-                margin: 20px auto;
+                margin: 5px auto;
                 transition: border-bottom 200ms ease-in-out;
                 &:hover {
                     border-bottom: 1px solid rgba($lightBlue, 1);
@@ -39,9 +42,8 @@
         }
     }
     .row:nth-child(2) {
-        // border: 1px solid white;
         .column {
-            margin: 20px 0 0 20px;
+            margin: 0 0 0 10px;
             h3 {
                 color: $lightBlue;
                 display: inline-block;
@@ -50,6 +52,8 @@
             }
             ul {
                 list-style: inside;
+                margin: 0 0 0 10px;
+                text-align: left;
                 li {
                     color: $accentWhite;
                     margin: 10px auto;
@@ -61,17 +65,17 @@
                 img {
                     border: 3px solid rgb(0,0,0);
                     border-radius: 5px;
-                    margin: 0px 0px 0px 50px;
+                    margin: 0px 0px 0px 40px;
                 }
             }
             span:first-child {
                 img {
-                    width: 300px;
+                    width: 320px;
                 }
             }
             span:nth-child(2) {
                 img {
-                    margin-top: -50px;
+                    margin-top: -80px;
                     width: 220px;
                 }
             }

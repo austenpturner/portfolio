@@ -25,9 +25,9 @@ const Project = ({name, description, github, deployed, tools, featuredImg, suppo
                     </ul>
                 </div>
                 <div className={styles.imgContainer}>
-                    {supportingImgs.map((img, index) => {
+                    {supportingImgs.map(({img, size}, index) => {
                         return (
-                            <span key={index}>
+                            <span key={index} className={size}>
                                 {React.createElement(img)}
                             </span>
                         )

@@ -1,4 +1,6 @@
-import * as React from "react"
+import * as React from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 import Layout from "../components/layout/layout";
 import styles from "../components/layout/layout.module.scss";
 // Intro section imports
@@ -11,7 +13,6 @@ import Tile from "../components/tile/Tile";
 // Portfolio section imports
 import portfolioContent from "../content/portfolio";
 import Project from "../components/project/Project";
-// import TitanFlowDesktop from "../components/image_files/titanFlowDesktop";
 
 const IndexPage = () => {
   return (
@@ -40,11 +41,13 @@ const IndexPage = () => {
       </section>
       <section className={styles.portfolio} id="portfolio">
         <h2>Portfolio</h2>
-        {portfolioContent.map((props, index) => {
-          return (
-            <Project key={index} {...props} />
-          )
-        })}
+        <Carousel>
+          {portfolioContent.map((props, index) => {
+            return (
+              <Project key={index} {...props} />
+            )
+          })}
+        </Carousel>
       </section>
       <section className={styles.contact} id="contact">
         <h2>Contact</h2>
