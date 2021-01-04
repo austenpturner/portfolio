@@ -1,0 +1,81 @@
+@import "../../styles/settings.scss";
+
+.projectContainer {
+    .row {
+        @include flex(row, space-between);
+        // margin: 20px 0px;
+    }
+    .row:first-child {
+        .column {
+            // @include flex(column, center);
+            margin: 40px 20px;
+            h3, p, a {
+                text-align: center;
+            }
+            h3 {
+                font-size: 2rem;
+                margin: 0 auto 30px;
+            }
+            p {
+                font-size: 1.1rem;
+                margin: 30px auto 20px;
+            }
+            a {
+                border-bottom: 1px solid rgba($lightBlue, 0);
+                color: $lightBlue;
+                display: block;
+                font-size: 1rem;
+                margin: 20px auto;
+                transition: border-bottom 200ms ease-in-out;
+                &:hover {
+                    border-bottom: 1px solid rgba($lightBlue, 1);
+                }
+            }
+        }
+        img {
+            border: 3px solid rgb(0,0,0);
+            border-radius: 5px;
+            width: 500px;
+        }
+    }
+    .row:nth-child(2) {
+        // border: 1px solid white;
+        .column {
+            margin: 20px 0 0 20px;
+            h3 {
+                color: $lightBlue;
+                display: inline-block;
+                font-size: 1.4rem;
+                text-align: center;
+            }
+            ul {
+                list-style: inside;
+                li {
+                    color: $accentWhite;
+                    margin: 10px auto;
+                }
+            }
+        }
+        .imgContainer {
+            span {
+                img {
+                    border: 3px solid rgb(0,0,0);
+                    border-radius: 5px;
+                    margin: 0px 0px 0px 50px;
+                }
+            }
+            span:first-child {
+                img {
+                    width: 300px;
+                }
+            }
+            span:nth-child(2) {
+                img {
+                    margin-top: -50px;
+                    width: 220px;
+                }
+            }
+        }
+        
+    }
+}

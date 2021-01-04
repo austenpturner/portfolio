@@ -7,9 +7,11 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 // About section imports
 import aboutContent from "../content/about";
 import AboutImage from "../components/image_files/Me.js";
-import Tab from "../components/tabs/Tab";
+import Tile from "../components/tile/Tile";
 // Portfolio section imports
 import portfolioContent from "../content/portfolio";
+import Project from "../components/project/Project";
+// import TitanFlowDesktop from "../components/image_files/titanFlowDesktop";
 
 const IndexPage = () => {
   return (
@@ -31,13 +33,18 @@ const IndexPage = () => {
         <div className={styles.toolsContainer}>
           {aboutContent.tools.map((props, index) => {
             return (
-              <Tab key={index} {...props}></Tab>
+              <Tile key={index} {...props}></Tile>
             )
           })}
         </div>
       </section>
       <section className={styles.portfolio} id="portfolio">
         <h2>Portfolio</h2>
+        {portfolioContent.map((props, index) => {
+          return (
+            <Project key={index} {...props} />
+          )
+        })}
       </section>
       <section className={styles.contact} id="contact">
         <h2>Contact</h2>
