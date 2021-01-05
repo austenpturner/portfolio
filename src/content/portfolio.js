@@ -1,6 +1,7 @@
 import TitanFlowDesktop from "../components/image_files/TitanFlowDesktop";
 import TitanFlowUIiPad from "../components/image_files/TitanFlowUIiPad";
 import TitanFlowUIDesktop from "../components/image_files/TitanFlowUIDesktop";
+import TitanFlowMobile from "../components/image_files/TitanFlowMobile";
 import InscopeDesktop from "../components/image_files/InscopeDesktop";
 import InscopeMobile from "../components/image_files/InscopeMobile";
 import InscopeTilesDesktop from "../components/image_files/InscopeTilesDesktop";
@@ -26,6 +27,7 @@ const portfolioContent = [
             "GitHub Pages"
         ],
         featuredImg: TitanFlowDesktop,
+        mobileImg: TitanFlowMobile,
         supportingImgs: [
             {
                 img: TitanFlowUIDesktop,
@@ -57,6 +59,7 @@ const portfolioContent = [
             "GitHub Pages"
         ],
         featuredImg: InscopeDesktop,
+        mobileImg: InscopeMobile,
         supportingImgs: [
             {
                 img: InscopeTilesDesktop,

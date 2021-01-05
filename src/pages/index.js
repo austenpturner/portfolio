@@ -13,6 +13,9 @@ import Tile from "../components/tile/Tile";
 
 // Portfolio section imports
 import portfolioContent from "../content/portfolio";
+import { FaCaretDown } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
+import { FaGithubSquare } from "react-icons/fa";
 import Carousel from "../components/carousel/Carousel";
 
 const IndexPage = () => {
@@ -42,7 +45,33 @@ const IndexPage = () => {
       </section>
       <section className={styles.portfolio} id="portfolio">
         <h2>Portfolio</h2>
-        <Carousel projects={portfolioContent}/>
+        <div className={styles.projectContainer}>
+          {portfolioContent.map((project, index) => {
+            return (
+              <div key={index} className={styles.project}>
+                <h3>{project.name}</h3>
+                <div className={styles.mobileImgContainer}>
+                  {React.createElement(project.mobileImg)}
+                </div>
+                {project.deployed.link !== "" && (
+                  <a href={project.deployed.link} target="_blank" rel="noreferrer">
+                    <FiExternalLink />
+                  </a>
+                )}
+                {project.github.link !== "" && (
+                  <a href={project.github.link} target="_blank" rel="noreferrer">
+                    <FaGithubSquare />
+                  </a>
+                )}
+                <p className={styles.infoBtn}>
+                  More info
+                  <FaCaretDown />
+                </p>
+              </div>
+            )
+          })}
+        </div>
+        <Carousel projects={portfolioContent} className={styles.carousel}/>
       </section>
       <section className={styles.contact} id="contact">
         <h2>Contact</h2>

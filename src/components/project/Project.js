@@ -17,7 +17,7 @@ const Project = ({name, description, github, deployed, tools, featuredImg, suppo
             </div>
             <div className={styles.row}>
                 <div className={styles.column}>
-                    <h3>Tools & Technologies Used:</h3>
+                    <h3>Tools & Technologies:</h3>
                     <ul>
                         {tools.map((tool, index) => {
                             return (

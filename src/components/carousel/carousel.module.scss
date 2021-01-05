@@ -1,39 +1,57 @@
 @import "../../styles/settings.scss";
 
 .carousel {
-    @include flex(row, center);
     align-items: center;
     border-radius: 5px;
     box-shadow: -2px 2px 8px 3px rgba($shadowGrey, 0.8);
-    height: 600px;
+    display: none;
+    height: 500px;
+    margin: 0 auto;
     position: relative;
+    width: 750px;
     .arrow {
         color: $lightBlue;
         cursor: pointer;
-        font-size: 2.6rem;
+        font-size: 2rem;
         position: absolute;
         top: 50%;
         user-select: none;
         transition: color 200ms ease-in-out;
         z-index: 10;
         &:first-child {
-            left: -60px;
+            left: -50px;
         }
         &:nth-child(2) {
-            right: -60px;
+            right: -50px;
         }
         &:hover {
             color: $accentWhite;
         }
     }
     .hidden {
-        height: 600px;
+        height: 500px;
         opacity: 0;
         transition-duration: 200ms ease-in-out;
     }
     .active {
-        height: 600px;
+        height: 500px;
         opacity: 1;
         transition-duration: 200ms;
+    }
+}
+
+@media (min-width: 1024px) {
+    .carousel {
+        @include flex(row, center);
+    }
+}
+
+@media (min-width: 1280px) {
+    .carousel {
+        height: 600px;
+        width: 1000px;
+        .hidden, .active {
+            height: 600px;
+        }
     }
 }

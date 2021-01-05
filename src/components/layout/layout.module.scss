@@ -63,39 +63,76 @@ aside {
 }
 
 .about {
+    margin-bottom: 40px;
     h2 {
-        font-size: 2.2rem;
-        margin: 0 0 50px 0;
+        font-size: 2rem;
+        margin: 0 0 20px 0;
     }
     h3 {
         color: $lightBlue;
-        font-size: 1.4rem;
-        margin: 50px 0 0;
+        font-size: 1.1rem;
+        margin: 20px auto 10px;
     }
     img {
         border-radius: 5px;
-        float: left;
-        margin: 0 20px 20px 0;
-        width: 280px;
+        display: block;
+        margin: 0 auto 10px;
+        max-width: 400px;
+        width: 100%;
     }
     p {
-        font-size: 1.1rem;
-        line-height: 24px;
-        margin: 0 0 20px 0;
+        font-size: 0.95rem;
+        line-height: 22px;
+        margin: 0 auto 10px;
     }
     .toolsContainer {
-        @include flex(row, space-between);
+        @include flex(row, flex-start);
         flex-wrap: wrap;
+        margin: 0 auto;
         a {
-            margin: 30px 20px 0 0;
+            margin: 10px auto;
+            width: 80%;
         }
     }
 }
 
 .portfolio {
     h2 {
-        font-size: 2.2rem;
-        margin-bottom: 50px;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    .projectContainer {
+        .project {
+            width: 100%;
+            h3 {
+                font-size: 1.4rem;
+                margin: 20px 0 10px;
+            }
+            .mobileImgContainer {
+                border: 3px solid rgb(0,0,0);
+                border-radius: 5px;
+                height: 90vw;
+                overflow: hidden;
+                // width: 100%;
+                img {
+                    width: 100%;
+                }
+            }
+            svg {
+                color: $accentWhite;
+                font-size: 1.6rem;
+                margin: 10px 8px 0 2px;
+            }
+            .infoBtn {
+                color: $lightBlue;
+                font-size: 1.1rem;
+            }
+            .infoBtn svg {
+                color: $lightBlue;
+                font-size: 1.2rem;
+                margin: 8px 0 -2px 4px;
+            }
+        }
     }
 }
 
@@ -106,5 +143,67 @@ aside {
 
     aside {
         display: inline-block;
+    }
+}
+
+@media (min-width: 768px), (max-height: 480px) {
+    .about {
+        h2 {
+            font-size: 2.2rem;
+            margin: 0 0 20px 0;
+        }
+        h3 {
+            font-size: 1.4rem;
+            margin: 50px 0 0;
+        }
+        img {
+            display: inline;
+            float: left;
+            margin: 0 20px 20px 0;
+            width: 280px;
+        }
+        p {
+            font-size: 1.1rem;
+            line-height: 24px;
+            margin: 0 0 20px 0;
+        }
+        .toolsContainer {
+            a {
+                margin: 30px 20px 0 0;
+                width: 210px; 
+            }
+        }
+    }
+
+    .portfolio {
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 0px;
+        }
+        .projectContainer {
+            @include flex(row, space-between);
+            .project {
+                width: 300px;
+                .mobileImgContainer {
+                    height: 300px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .about {
+        h2 {
+            margin: 0 0 20px 0;
+        }
+    }
+    .portfolio {
+        h2 {
+            margin: 0 0 20px 0;
+        }
+        .projectContainer {
+            display: none;
+        }
     }
 }
