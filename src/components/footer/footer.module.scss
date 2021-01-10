@@ -4,6 +4,7 @@
 footer {
     background: $darkGrey;
     border-top: 1px solid $mediumGrey;
+    height: 180px;
     .footerLinks {
         @include flex(row, space-between);
         margin: 30px auto;
@@ -29,6 +30,7 @@ footer {
 
 @media (min-width: 769px) and (min-height: 480px) {
     footer {
+        height: 120px;
         .footerLinks {
             width: 450px;
         }

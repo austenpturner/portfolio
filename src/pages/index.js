@@ -1,24 +1,36 @@
-import * as React from "react";
+import React, { useState } from "react";
 import Layout from "../components/layout/layout";
 import styles from "../components/layout/layout.module.scss";
 
-// Intro section imports
+// Intro section imports:
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
-// About section imports
+// About section imports:
 import aboutContent from "../content/about";
 import AboutImage from "../components/image_files/Me.js";
 import Tile from "../components/tile/Tile";
 
-// Portfolio section imports
+// Portfolio section imports:
 import portfolioContent from "../content/portfolio";
 import { FaCaretDown } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 import { FaGithubSquare } from "react-icons/fa";
 import Carousel from "../components/carousel/Carousel";
 
+// Contact section imports:
+import contactInfo from "../content/contact";
+
 const IndexPage = () => {
+  const [selectedItem, setSelectedItem] = useState(false);
+
+  function handleShowMoreInfo(event) {
+    const id = event.target.parentElement.id;
+    console.log(id);
+    setSelectedItem(!selectedItem);
+    console.log(selectedItem);
+  };
+
   return (
     <Layout>
       <section className={styles.intro} id="intro">
@@ -48,7 +60,7 @@ const IndexPage = () => {
         <div className={styles.projectContainer}>
           {portfolioContent.map((project, index) => {
             return (
-              <div key={index} className={styles.project}>
+              <div key={index} className={styles.project} id={index}>
                 <h3>{project.name}</h3>
                 <div className={styles.mobileImgContainer}>
                   {React.createElement(project.mobileImg)}
@@ -63,10 +75,24 @@ const IndexPage = () => {
                     <FaGithubSquare />
                   </a>
                 )}
-                <p className={styles.infoBtn}>
+                <p className={styles.infoBtn} onClick={handleShowMoreInfo}>
                   More info
                   <FaCaretDown />
                 </p>
+                <div 
+                  className={selectedItem ? styles.moreInfoContainer : styles.hide}
+                  // className={index === selectedItem ? styles.moreInfoContainer : styles.hide}
+                >
+                  <p>{project.description}</p>
+                  <h3>Tools & Technologies:</h3>
+                  <ul>
+                      {project.tools.map((tool, index) => {
+                          return (
+                              <li key={index}>{tool}</li>
+                          )
+                      })}
+                  </ul>
+                </div>
               </div>
             )
           })}
@@ -75,6 +101,20 @@ const IndexPage = () => {
       </section>
       <section className={styles.contact} id="contact">
         <h2>Contact</h2>
+        <h3>{contactInfo.subHeading}</h3>
+        <p>{contactInfo.info}</p>
+        <p>
+          Email me at 
+          <a href={contactInfo.emailLink} target="_blank" rel="noreferrer">{contactInfo.email}</a>
+        </p>
+        <p>
+          Connect with me on
+          <a href={contactInfo.linkedinLink} target="_blank" rel="noreferrer">LinkedIn</a>
+        </p>
+        <p>
+          View more of my work on
+          <a href={contactInfo.githubLink} target="_blank" rel="noreferrer">GitHub</a>
+        </p>
       </section>
     </Layout>
   )

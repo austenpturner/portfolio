@@ -12,7 +12,9 @@ const Project = ({name, description, github, deployed, tools, featuredImg, suppo
                     <p>
                         <a href={deployed.link} target="_blank" rel="noreferrer">{deployed.text}</a>
                     </p>
-                    <a href={github.link} target="_blank" rel="noreferrer">{github.text}</a>
+                    <p>
+                        <a href={github.link} target="_blank" rel="noreferrer">{github.text}</a>
+                    </p>
                 </div>
             </div>
             <div className={styles.row}>
