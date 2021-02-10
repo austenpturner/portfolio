@@ -26,9 +26,11 @@ const IndexPage = () => {
 
   function handleShowMoreInfo(event) {
     const id = event.target.parentElement.id;
-    console.log(id);
-    setSelectedItem(!selectedItem);
-    console.log(selectedItem);
+    if (id === selectedItem) {
+      setSelectedItem(false);
+    } else {
+      setSelectedItem(id);
+    }
   };
 
   return (
@@ -80,8 +82,7 @@ const IndexPage = () => {
                   <FaCaretDown />
                 </p>
                 <div 
-                  className={selectedItem ? styles.moreInfoContainer : styles.hide}
-                  // className={index === selectedItem ? styles.moreInfoContainer : styles.hide}
+                  className={index === parseInt(selectedItem) ? styles.moreInfoContainer : `${styles.hide} ${styles.moreInfoContainer}`}
                 >
                   <p>{project.description}</p>
                   <h3>Tools & Technologies:</h3>
