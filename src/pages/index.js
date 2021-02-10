@@ -13,7 +13,7 @@ import Tile from "../components/tile/Tile";
 
 // Portfolio section imports:
 import portfolioContent from "../content/portfolio";
-import { FaCaretDown } from "react-icons/fa";
+import { FaCaretUp } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 import { FaGithubSquare } from "react-icons/fa";
 import Carousel from "../components/carousel/Carousel";
@@ -79,19 +79,20 @@ const IndexPage = () => {
                 )}
                 <p className={styles.infoBtn} onClick={handleShowMoreInfo}>
                   More info
-                  <FaCaretDown />
+                  <FaCaretUp />
                 </p>
                 <div 
                   className={index === parseInt(selectedItem) ? styles.moreInfoContainer : `${styles.hide} ${styles.moreInfoContainer}`}
                 >
                   <p>{project.description}</p>
-                  <h3>Tools & Technologies:</h3>
+                  
                   <ul>
-                      {project.tools.map((tool, index) => {
-                          return (
-                              <li key={index}>{tool}</li>
-                          )
-                      })}
+                    <h3>Tools & Technologies:</h3>
+                    {project.tools.map((tool, index) => {
+                        return (
+                            <li key={index}>{tool}</li>
+                        )
+                    })}
                   </ul>
                 </div>
               </div>
