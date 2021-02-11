@@ -1,19 +1,19 @@
 const navItems = [
     {
         title: "About",
-        link: "/#about",
+        link: "/portfolio/#about",
     },
     {
         title: "Portfolio",
-        link: "/#portfolio",
+        link: "/portfolio/#portfolio",
     },
     {
         title: "Contact",
-        link: "/#contact",
+        link: "/portfolio/#contact",
     },
     {
         title: "Resume",
-        link: "/#contact",
+        link: "/portfolio/#contact",
     }
 ];
 
