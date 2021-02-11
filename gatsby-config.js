@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Austen Turner`,
-    description: `Web Development Portfolio`,
-    siteUrl: `https://austenpturner.github.io/portfolio/`
+    description: `Front End Web Dev Portfolio`,
+    // siteUrl: `https://austenpturner.github.io/portfolio/`
   },
   plugins: [
     "gatsby-plugin-sass",
