@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Austen Turner`,
-    description: `Front End Web Dev Portfolio`,
+    description: `Full Stack Web Dev Portfolio`,
     siteUrl: `https://austenpturner.github.io/portfolio/`
   },
   plugins: [

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SEO from "../components/seo";
 import Layout from "../components/layout/layout";
 import styles from "../components/layout/layout.module.scss";
 
@@ -35,6 +36,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
+      <SEO title="Portfolio" />
       <section className={styles.intro} id="intro">
         <h1>Hi, I'm Austen.</h1>
         <h2>A Full Stack Web Developer</h2>
