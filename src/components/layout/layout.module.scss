@@ -38,10 +38,10 @@ aside {
         color: $accentWhite;
         font-size: 1.4rem;
     }
-    h3 {
-        font-size: 1.2rem;
-        text-transform: uppercase;
-    }
+    // h3 {
+    //     font-size: 1.2rem;
+    //     text-transform: uppercase;
+    // }
     svg {
         animation-duration: 2s;
         animation-iteration-count: infinite;
@@ -161,7 +161,7 @@ aside {
                     li {
                         color: $accentWhite;
                         font-size: 0.9rem;
-                        margin: 8px 0 0 15px;
+                        margin: 5px 0 0 15px;
                         
                     }
                 }

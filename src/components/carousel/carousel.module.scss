@@ -10,14 +10,14 @@
     position: relative;
     width: 750px;
     .arrow {
-        color: $lightBlue;
+        color: $accentWhite;
         cursor: pointer;
         font-size: 2rem;
         position: absolute;
         top: 50%;
         user-select: none;
         transition: color 200ms ease-in-out;
-        z-index: 10;
+        z-index: 1;
         &:first-child {
             left: -50px;
         }
@@ -25,7 +25,7 @@
             right: -50px;
         }
         &:hover {
-            color: $accentWhite;
+            color: $lightBlue;
         }
     }
     .hidden {

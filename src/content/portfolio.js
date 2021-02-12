@@ -19,6 +19,38 @@ import TeeTimeScoreboard from "../components/image_files/TeeTimeScoreboard";
 
 const portfolioContent = [
     {
+        name: "Weather Dashboard",
+        description: "A weather web application that displays the current weather, hourly weather, and five-day forecast of your current, searched, or saved location.",
+        deployed: {
+            link: "https://weather-dashboard-app.herokuapp.com/",
+            text: "Visit Deployed App",
+        },
+        github: {
+            link: "https://github.com/austenpturner/weather-dashboard",
+            text: "View Code On GitHub",
+        },
+        tools: [
+            "JavaScript & Sass",
+            "React",
+            "Local Storage",
+            "Geolocation",
+            "OpenWeather API",
+            "GitHub & Heroku"
+        ],
+        featuredImg: WeatherDashboardDesktop,
+        mobileImg: WeatherDashboardMobile,
+        supportingImgs: [
+            {
+                img: WeatherDashboardFeatures,
+                size: "desktop",
+            },
+            {
+                img: WeatherDashboardSearch,
+                size: "mobile",
+            }
+        ],
+    },
+    {
         name: "TitanFlow Website",
         description: "A responsive, mobile-first website for TitanFlow's stock options trading app built using Gatsby, React and Sass.",
         deployed: {
@@ -78,38 +110,6 @@ const portfolioContent = [
             },
             {
                 img: InscopeMobile,
-                size: "mobile",
-            }
-        ],
-    },
-    {
-        name: "Weather Dashboard",
-        description: "A weather web application that displays the current weather, hourly weather, and five-day forecast of your current, searched, or saved location.",
-        deployed: {
-            link: "https://weather-dashboard-app.herokuapp.com/",
-            text: "Visit Deployed App",
-        },
-        github: {
-            link: "https://github.com/austenpturner/weather-dashboard",
-            text: "View Code On GitHub",
-        },
-        tools: [
-            "JavaScript & Sass",
-            "React",
-            "Local Storage",
-            "Geolocation",
-            "OpenWeather API",
-            "GitHub & Heroku"
-        ],
-        featuredImg: WeatherDashboardDesktop,
-        mobileImg: WeatherDashboardMobile,
-        supportingImgs: [
-            {
-                img: WeatherDashboardFeatures,
-                size: "desktop",
-            },
-            {
-                img: WeatherDashboardSearch,
                 size: "mobile",
             }
         ],
