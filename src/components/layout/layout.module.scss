@@ -248,13 +248,19 @@ aside {
             flex-wrap: wrap;
             .project {
                 margin: 0 20px 0 0;
-                width: 300px;
+                width: 280px;
                 .mobileImgContainer {
-                    height: 300px;
+                    height: 280px;
                 }
                 .moreInfoContainer {
-                    height: 300px;
+                    height: 280px;
                     top: 58px;
+                     p {
+                        font-size: 0.9rem;
+                    }
+                    h3 {
+                        font-size: 1.1rem;
+                    }
                 }
             }
         }
