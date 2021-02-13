@@ -1,3 +1,5 @@
+import Resume from "../Documents/Austen_Turner_Resume.pdf";
+
 const navItems = [
     {
         title: "About",
@@ -13,7 +15,7 @@ const navItems = [
     },
     {
         title: "Resume",
-        link: "/#contact",
+        link: Resume,
     }
 ];
 

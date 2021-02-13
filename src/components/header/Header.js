@@ -1,4 +1,3 @@
-// import { Link } from "gatsby";
 import React, { useState, useEffect } from "react";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import navItems from "../../content/navigation";
@@ -43,11 +42,20 @@ function Header() {
         <nav>
         <ul>
           {navItems.map(({link, title}, index) => {
-            return (
-              <li key={index}>
-                <AnchorLink to={link} title={title}/>
-              </li>
-            )
+            console.log(title);
+            if (title === "Resume") {
+              return (
+                <li key={index}>
+                  <a href={link} target="_blank" rel="noreferrer noopener">{title}</a>
+                </li>
+              )
+            } else {
+              return (
+                <li key={index}>
+                  <AnchorLink to={link} title={title}/>
+                </li>
+              )
+            }
           })}
         </ul>
         <div className={styles.burger} onClick={handleNavSlide}>
