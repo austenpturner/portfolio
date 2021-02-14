@@ -42,11 +42,10 @@ function Header() {
         <nav>
         <ul>
           {navItems.map(({link, title}, index) => {
-            console.log(title);
-            if (title === "Resume") {
+            {/* if (title === "Resume") {
               return (
                 <li key={index}>
-                  <a href={link} target="_blank" rel="noreferrer noopener">{title}</a>
+                  <a href='' target="_blank" rel="noreferrer noopener">{title}</a>
                 </li>
               )
             } else {
@@ -55,7 +54,12 @@ function Header() {
                   <AnchorLink to={link} title={title}/>
                 </li>
               )
-            }
+            } */}
+            return (
+                <li key={index}>
+                  <AnchorLink to={link} title={title}/>
+                </li>
+              )
           })}
         </ul>
         <div className={styles.burger} onClick={handleNavSlide}>

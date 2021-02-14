@@ -1,4 +1,4 @@
-import Resume from "../Documents/Austen_Turner_Resume.pdf";
+// import Resume from "../Documents/Austen_Turner_Resume.pdf";
 
 const navItems = [
     {
@@ -15,7 +15,7 @@ const navItems = [
     },
     {
         title: "Resume",
-        link: Resume,
+        link: "/#contact",
     }
 ];
 
