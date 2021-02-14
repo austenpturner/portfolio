@@ -38,10 +38,6 @@ aside {
         color: $accentWhite;
         font-size: 1.4rem;
     }
-    // h3 {
-    //     font-size: 1.2rem;
-    //     text-transform: uppercase;
-    // }
     svg {
         animation-duration: 2s;
         animation-iteration-count: infinite;
@@ -91,7 +87,10 @@ aside {
         margin: 0 auto;
         a {
             margin: 10px auto;
-            width: 80%;
+            width: 45%;
+            button {
+                font-size: 0.9rem;
+            }
         }
     }
 }
@@ -233,7 +232,10 @@ aside {
         .toolsContainer {
             a {
                 margin: 30px 20px 0 0;
-                width: 210px; 
+                width: 30%;
+                button {
+                    font-size: 1rem;
+                }
             }
         }
     }

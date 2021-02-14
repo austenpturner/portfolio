@@ -9,7 +9,7 @@ const aboutContent = {
             link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
         },
         {
-            title: "Single Page Applications & Gatsby",
+            title: "GatsbyJS & Modular Sass",
             link: "https://www.gatsbyjs.com/docs/",
         },
         {
@@ -25,8 +25,8 @@ const aboutContent = {
             link: "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations",
         },
         {
-            title: "Modular Sass",
-            link: "https://medium.com/clover-platform-blog/modular-scss-and-why-you-need-it-6bb2d8c40fd8",
+            title: "GraphQL and SEOs",
+            link: "https://graphql.org/",
         },
         {
             title: "NodeJS & NPM",
