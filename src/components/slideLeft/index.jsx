@@ -3,13 +3,12 @@ import About from "../about";
 import styles from "./slideLeft.module.scss";
 import { UIContext } from "../../context/uiContext";
 import Button from "../button";
+import { FaArrowAltCircleRight } from "react-icons/fa";
+import useToggleSlide from "../../hooks/useToggleSlide";
 
 export default function SlideLeft() {
-  const { state, uiDispatch } = useContext(UIContext);
-
-  function handleToggleSlide(direction) {
-    uiDispatch({ type: `OPEN_${direction}_SLIDE` });
-  }
+  const { state } = useContext(UIContext);
+  const handleToggleSlide = useToggleSlide();
 
   return (
     <div
@@ -18,8 +17,8 @@ export default function SlideLeft() {
     >
       <About />
       <Button
-        type="close"
-        text="CLOSE"
+        type="closeLeft"
+        icon={<FaArrowAltCircleRight />}
         handleAction={() => handleToggleSlide("LEFT")}
       />
     </div>

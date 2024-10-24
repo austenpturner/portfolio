@@ -1,0 +1,60 @@
+@use "../../styles/util/" as *;
+
+button {
+  padding: rem(4) rem(8);
+}
+
+.left,
+.right,
+.bottom {
+  margin: rem(10);
+  padding: rem(4) rem(8);
+  height: rem(40);
+  width: rem(100);
+}
+
+.closeRight,
+.closeLeft,
+.closeBottom {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: rem(12);
+  padding: 0;
+  position: absolute;
+  svg {
+    color: var(--light-text);
+    height: rem(30);
+    width: rem(30);
+  }
+}
+
+.closeRight {
+  left: 0;
+  top: 0;
+}
+
+.closeLeft,
+.closeBottom {
+  right: 0;
+  top: 0;
+}
+
+.left {
+  align-self: center;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  justify-self: end;
+}
+.bottom {
+  align-self: start;
+  grid-column-start: 2;
+  grid-row-start: 3;
+  justify-self: center;
+}
+.right {
+  align-self: center;
+  grid-column-start: 3;
+  grid-row-start: 2;
+  justify-self: start;
+}

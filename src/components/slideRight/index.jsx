@@ -3,13 +3,12 @@ import Contact from "../contact";
 import styles from "./slideRight.module.scss";
 import { UIContext } from "../../context/uiContext";
 import Button from "../button";
+import { FaArrowAltCircleLeft } from "react-icons/fa";
+import useToggleSlide from "../../hooks/useToggleSlide";
 
 export default function SlideRight() {
-  const { state, uiDispatch } = useContext(UIContext);
-
-  function handleToggleSlide(direction) {
-    uiDispatch({ type: `OPEN_${direction}_SLIDE` });
-  }
+  const { state } = useContext(UIContext);
+  const handleToggleSlide = useToggleSlide();
 
   return (
     <div
@@ -18,8 +17,8 @@ export default function SlideRight() {
     >
       <Contact />
       <Button
-        type="close"
-        text="CLOSE"
+        type="closeRight"
+        icon={<FaArrowAltCircleLeft />}
         handleAction={() => handleToggleSlide("RIGHT")}
       />
     </div>
