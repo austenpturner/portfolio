@@ -1,4 +1,4 @@
-export const slides = [
+export const slideButtons = [
   {
     id: 1,
     direction: "left",
