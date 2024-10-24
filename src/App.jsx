@@ -5,14 +5,11 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import HomePage from "./pages/home";
-import Layout from "./layout";
 import ErrorPage from "./pages/error";
 
 const router = createHashRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />} errorElement={<ErrorPage />}>
-      <Route index element={<HomePage />} />
-    </Route>
+    <Route path="/" element={<HomePage />} errorElement={<ErrorPage />} />
   )
 );
 

@@ -1,0 +1,8 @@
+@mixin grid-parent($columns, $rows) {
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+}
+
+@mixin grid-child() {
+}
