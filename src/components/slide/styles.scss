@@ -1,0 +1,42 @@
+@use "../../styles/util/" as *;
+
+.leftSlide,
+.bottomSlide,
+.rightSlide {
+  background-color: var(--medium-grey);
+  height: 100vh;
+  position: absolute;
+  transition: transform 500ms ease-in-out;
+  width: 100vw;
+  h3 {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.leftSlide {
+  left: 0;
+  top: 0;
+  transform: translateX(-100%);
+  &[data-visible="true"] {
+    transform: translateX(0%);
+  }
+}
+
+.bottomSlide {
+  bottom: 0;
+  right: 0;
+  transform: translateY(100%);
+  &[data-visible="true"] {
+    transform: translateY(0%);
+  }
+}
+
+.rightSlide {
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  &[data-visible="true"] {
+    transform: translateX(0%);
+  }
+}
