@@ -1,0 +1,26 @@
+@use "../util/index" as *;
+
+h1 {
+  font-family: var(--font-playfair);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 5px auto;
+}
+
+h1 {
+  font-size: rem(38);
+}
+
+h2 {
+  font-family: var(--font-playfair);
+  font-size: rem(24);
+  font-weight: 400;
+  margin: 5px auto;
+}
+
+p {
+  font-family: var(--font-figtree);
+  font-size: rem(16);
+  font-weight: 300;
+  margin: 2px auto;
+}
