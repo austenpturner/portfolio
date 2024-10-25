@@ -2,6 +2,7 @@
 
 .header {
   @include grid-parent(auto 40% auto, 30vh 15vh 55vh);
+  background-color: #fff8f0;
   position: absolute;
   top: 0;
   left: 0;
@@ -14,12 +15,12 @@
     @include grid-child(2, 2);
     h1 {
       @include grid-child(0, 1, end);
-      margin: rem(5) auto;
+      margin: rem(3) auto;
     }
     h2 {
       @include grid-child(1, 2, start);
       justify-self: center;
-      margin: rem(5) auto;
+      margin: rem(3) auto;
     }
   }
 }

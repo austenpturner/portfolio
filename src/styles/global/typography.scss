@@ -1,23 +1,25 @@
 @use "../util/index" as *;
 
-h1,
-h2 {
-  font-family: var(--font-playfair);
+h1 {
+  font-family: var(--font-lobster);
+  font-size: rem(48);
+  font-weight: 400;
 }
 
-h1 {
-  font-size: rem(38);
-  font-weight: 700;
+h2,
+h3 {
+  font-family: var(--font-quicksand);
+  font-weight: 400;
 }
 
 h2 {
   font-size: rem(24);
-  font-weight: 400;
 }
 
 p,
 button {
   font-family: var(--font-figtree);
+  font-weight: 300;
 }
 
 p {

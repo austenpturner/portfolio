@@ -8,10 +8,11 @@ button {
 .left,
 .right,
 .bottom {
-  // background-color: transparent;
+  background-color: transparent;
   border: none;
   border-radius: 3%;
   font-size: rem(14);
+  font-style: italic;
   margin: rem(10);
   padding: rem(4);
   height: rem(50);
@@ -38,14 +39,14 @@ button {
 }
 
 .closeRight {
-  left: 0;
-  top: 0;
+  left: 9%;
+  top: 4%;
 }
 
 .closeLeft,
 .closeBottom {
-  right: 0;
-  top: 0;
+  right: 9%;
+  top: 4%;
 }
 
 .left {

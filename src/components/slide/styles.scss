@@ -3,13 +3,16 @@
 .leftSlide,
 .bottomSlide,
 .rightSlide {
-  background-color: var(--medium-grey);
+  background-color: var(--darker-grey);
+  border-radius: 10%;
   height: 100vh;
   position: absolute;
   transition: transform 500ms ease-in-out;
   width: 100vw;
   h3 {
-    margin: 0 auto;
+    color: var(--light-text);
+    font-size: rem(22);
+    margin: rem(50) auto 0;
     text-align: center;
   }
 }
@@ -17,7 +20,7 @@
 .leftSlide {
   left: 0;
   top: 0;
-  transform: translateX(-100%);
+  transform: translateX(-94%);
   &[data-visible="true"] {
     transform: translateX(0%);
   }
@@ -26,7 +29,7 @@
 .bottomSlide {
   bottom: 0;
   right: 0;
-  transform: translateY(100%);
+  transform: translateY(96%);
   &[data-visible="true"] {
     transform: translateY(0%);
   }
@@ -35,7 +38,7 @@
 .rightSlide {
   right: 0;
   top: 0;
-  transform: translateX(100%);
+  transform: translateX(94%);
   &[data-visible="true"] {
     transform: translateX(0%);
   }

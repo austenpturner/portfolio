@@ -1,4 +1,4 @@
-import { FaArrowAltCircleDown, FaArrowAltCircleLeft } from "react-icons/fa";
+import { FaArrowAltCircleLeft, FaArrowAltCircleUp } from "react-icons/fa";
 import About from "../components/about";
 import Portfolio from "../components/portfolio";
 import Contact from "../components/contact";
@@ -23,7 +23,7 @@ export const slides = [
     className: "bottomSlide",
     button: {
       type: "closeBottom",
-      icon: FaArrowAltCircleDown,
+      icon: FaArrowAltCircleUp,
       actionDirection: "BOTTOM",
     },
   },

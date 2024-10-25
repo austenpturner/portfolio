@@ -24,7 +24,7 @@ export default function Slide({ direction, content, className, button }) {
   }
 
   return (
-    <div className={className} data-visible={getContext() ? true : false}>
+    <div className={`${className}`} data-visible={getContext() ? true : false}>
       <Component />
       <Button
         type={button.type}
