@@ -1,9 +1,7 @@
 @use "../../styles/util/" as *;
 
 .header {
-  display: grid;
-  grid-template-columns: auto 40% auto;
-  grid-template-rows: 30vh 15vh 55vh;
+  @include grid-parent(auto 40% auto, 30vh 15vh 55vh);
   position: absolute;
   top: 0;
   left: 0;
@@ -12,23 +10,14 @@
   transition: transform 500ms ease-in-out;
   width: 100vw;
   .headerContainer {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    align-self: stretch;
-    grid-column-start: 2;
-    grid-row-start: 2;
-    justify-self: stretch;
+    @include grid-parent(1fr, repeat(2, 1fr));
+    @include grid-child(2, 2);
     h1 {
-      align-self: end;
-      grid-column-start: 0;
-      grid-row-start: 1;
-      justify-self: center;
+      @include grid-child(0, 1, end);
       margin: rem(5) auto;
     }
     h2 {
-      align-self: start;
-      grid-column-start: 1;
-      grid-row-start: 2;
+      @include grid-child(1, 2, start);
       justify-self: center;
       margin: rem(5) auto;
     }

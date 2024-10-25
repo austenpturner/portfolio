@@ -49,49 +49,24 @@ button {
 }
 
 .left {
-  align-self: center;
-  grid-column-start: 1;
-  grid-row-start: 2;
-  justify-self: end;
-  display: grid;
-  grid-template-columns: 20% auto;
-  column-gap: rem(10);
-  align-items: center;
-  justify-content: center;
+  @include grid-child(1, 2, center, end);
+  @include grid-parent(20% auto, 1fr, rem(10), center, center);
   svg {
+    @include grid-child(0, 0, center, end);
     order: -1;
-    align-self: center;
-    justify-self: end;
   }
 }
 .bottom {
-  align-self: start;
-  grid-column-start: 2;
-  grid-row-start: 3;
-  justify-self: center;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 50%;
-  // row-gap: rem(1);
-  align-items: center;
-  justify-content: center;
+  @include grid-child(2, 3, start, center);
+  @include grid-parent(1fr, 50% auto, rem(0), center, center);
   svg {
-    align-self: center;
-    justify-self: center;
+    @include grid-child(0, 0, center, center);
   }
 }
 .right {
-  align-self: center;
-  grid-column-start: 3;
-  grid-row-start: 2;
-  justify-self: start;
-  display: grid;
-  grid-template-columns: auto 20%;
-  column-gap: rem(10);
-  align-items: center;
-  justify-content: center;
+  @include grid-child(3, 2, center, start);
+  @include grid-parent(auto 20%, 1fr, rem(10), center, center);
   svg {
-    align-self: center;
-    justify-self: end;
+    @include grid-child(0, 0, center, end);
   }
 }
