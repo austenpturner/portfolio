@@ -1,16 +1,25 @@
 @use "../../styles/util/" as *;
 
 button {
+  cursor: pointer;
   padding: rem(4) rem(8);
 }
 
 .left,
 .right,
 .bottom {
+  // background-color: transparent;
+  border: none;
+  border-radius: 3%;
+  font-size: rem(14);
   margin: rem(10);
-  padding: rem(4) rem(8);
-  height: rem(40);
+  padding: rem(4);
+  height: rem(50);
   width: rem(100);
+  svg {
+    height: rem(18);
+    width: rem(18);
+  }
 }
 
 .closeRight,
@@ -18,7 +27,6 @@ button {
 .closeBottom {
   background-color: transparent;
   border: none;
-  cursor: pointer;
   margin: rem(12);
   padding: 0;
   position: absolute;
@@ -45,16 +53,45 @@ button {
   grid-column-start: 1;
   grid-row-start: 2;
   justify-self: end;
+  display: grid;
+  grid-template-columns: 20% auto;
+  column-gap: rem(10);
+  align-items: center;
+  justify-content: center;
+  svg {
+    order: -1;
+    align-self: center;
+    justify-self: end;
+  }
 }
 .bottom {
   align-self: start;
   grid-column-start: 2;
   grid-row-start: 3;
   justify-self: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 50%;
+  // row-gap: rem(1);
+  align-items: center;
+  justify-content: center;
+  svg {
+    align-self: center;
+    justify-self: center;
+  }
 }
 .right {
   align-self: center;
   grid-column-start: 3;
   grid-row-start: 2;
   justify-self: start;
+  display: grid;
+  grid-template-columns: auto 20%;
+  column-gap: rem(10);
+  align-items: center;
+  justify-content: center;
+  svg {
+    align-self: center;
+    justify-self: end;
+  }
 }

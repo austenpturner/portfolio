@@ -26,6 +26,7 @@ export default function Header() {
             key={button.id}
             type={button.direction}
             text={button.content}
+            icon={<button.icon />}
             handleAction={() => handleToggleSlide(button.toggle)}
           />
         );
