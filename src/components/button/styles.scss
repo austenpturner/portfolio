@@ -2,7 +2,6 @@
 
 button {
   border: none;
-  color: var(--dark-text);
   cursor: pointer;
   padding: 0;
   span {
@@ -14,6 +13,7 @@ button {
 .right,
 .bottom {
   background-color: transparent;
+  color: var(--dark-text);
   border-radius: 3%;
   font-size: rem(12);
   font-style: italic;
@@ -92,6 +92,7 @@ button {
 .closeLeft,
 .closeBottom {
   background-color: transparent;
+  color: var(--dark-text);
   margin: rem(12);
   position: absolute;
   svg {
@@ -114,4 +115,20 @@ button {
 .closeBottom {
   right: rem(1);
   bottom: rem(1);
+}
+
+.resume {
+  @include grid-parent(auto auto, 1fr, rem(5), center, center);
+  background-color: var(--tarot-blue);
+  border: 1px solid var(--darker-grey);
+  border-radius: 3%;
+  padding: rem(8) rem(8);
+  span {
+    color: var(--darker-grey);
+    font-weight: 500;
+  }
+  svg {
+    height: rem(18);
+    width: rem(18);
+  }
 }

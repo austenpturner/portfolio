@@ -4,12 +4,71 @@
   border: 1.5px solid var(--darker-grey);
   height: 100%;
   .header {
-    background-color: var(--lighter-grey);
+    background-color: var(--tarot-yellow);
     border-bottom: 1px solid var(--darker-grey);
     margin: 0;
     padding: rem(12) 0;
     @include breakpoint(medium) {
       padding: rem(26) 0;
+    }
+  }
+  .content {
+    padding: rem(20);
+    .introContainer {
+      margin: 0 0 rem(20);
+      p {
+        margin: 0 0 rem(24);
+      }
+      ul {
+        list-style-type: circle;
+        margin: rem(-14) 0 0;
+        padding: 0 rem(22);
+        li {
+          padding: rem(2) 0;
+        }
+      }
+    }
+    .skillsContainer {
+      margin: rem(15) 0;
+      h4 {
+        font-size: rem(20);
+        margin: rem(12) 0;
+      }
+      ul {
+        @include grid-parent(
+          repeat(5, 1fr),
+          repeat(3, 1fr),
+          rem(10),
+          center,
+          center
+        );
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+          @include grid-parent(1fr, repeat(2, 1fr), rem(0), center, center);
+          @include grid-child(0, 0, center, center);
+          background-color: var(--tarot-grey);
+          border: 1px solid var(--darker-grey);
+          border-radius: 5%;
+          height: 100%;
+          width: rem(90);
+          svg,
+          span {
+            @include grid-child(0, 0, center, center);
+          }
+          svg {
+            height: rem(30);
+            padding-top: rem(10);
+            width: rem(30);
+          }
+          span {
+            font-size: rem(12);
+            font-weight: 400;
+            padding-bottom: rem(10);
+          }
+        }
+      }
     }
   }
 }

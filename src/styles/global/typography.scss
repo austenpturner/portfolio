@@ -5,7 +5,8 @@ h1 {
   font-weight: 400;
 }
 
-h2 {
+h2,
+h4 {
   font-family: var(--font-quicksand);
   font-weight: 400;
 }
@@ -15,12 +16,14 @@ h3 {
 }
 
 p,
+li,
 button {
   font-family: var(--font-quicksand);
   font-weight: 400;
 }
 
-p {
+p,
+li {
   font-size: rem(16);
   font-weight: 300;
 }
