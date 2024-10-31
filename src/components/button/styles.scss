@@ -2,8 +2,12 @@
 
 button {
   border: none;
+  color: var(--dark-text);
   cursor: pointer;
   padding: 0;
+  span {
+    color: var(--dark-text);
+  }
 }
 
 .left,

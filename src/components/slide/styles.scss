@@ -15,9 +15,12 @@
   width: 90vw;
   h3 {
     color: var(--darker-grey);
-    font-size: rem(30);
+    font-size: rem(24);
     text-align: center;
     text-transform: uppercase;
+    @include breakpoint(medium) {
+      font-size: rem(30);
+    }
   }
   &[data-visible="true"] {
     transform: translate(0%);
