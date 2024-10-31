@@ -4,7 +4,7 @@ import "./styles.scss";
 export default function Button({ type, handleAction, text, icon }) {
   return (
     <button className={type} onClick={handleAction}>
-      {text && text}
+      <span>{text && text}</span>
       {icon && icon}
     </button>
   );

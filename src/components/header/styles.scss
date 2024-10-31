@@ -1,0 +1,46 @@
+@use "../../styles/util/" as *;
+
+.header {
+  @include grid-parent(23% 56% 23%, 31vh 13vh 56vh);
+  @include breakpoint(medium) {
+    @include grid-parent(auto 40% auto, 30vh 15vh 55vh);
+  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 500ms ease-in-out;
+  width: 100vw;
+  &.header-slide-left {
+    transform: translateX(100%);
+  }
+  &.header-slide-right {
+    transform: translateX(-100%);
+  }
+  &.header-slide-bottom {
+    transform: translateY(-100%);
+  }
+  .header-container {
+    @include grid-parent(1fr, repeat(2, 1fr));
+    @include grid-child(2, 2);
+    @include breakpoint(medium) {
+      @include grid-parent(1fr, 60% 40%);
+    }
+    h1 {
+      @include grid-child(0, 1, end);
+      font-size: rem(31);
+      margin: rem(3) auto;
+      @include breakpoint(medium) {
+        font-size: rem(48);
+      }
+    }
+    h2 {
+      @include grid-child(1, 2, start);
+      font-size: rem(17);
+      justify-self: center;
+      margin: rem(3) auto;
+      @include breakpoint(medium) {
+        font-size: rem(24);
+      }
+    }
+  }
+}

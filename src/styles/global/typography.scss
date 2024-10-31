@@ -2,24 +2,22 @@
 
 h1 {
   font-family: var(--font-lobster);
-  font-size: rem(48);
-  font-weight: 400;
-}
-
-h2,
-h3 {
-  font-family: var(--font-quicksand);
   font-weight: 400;
 }
 
 h2 {
-  font-size: rem(24);
+  font-family: var(--font-quicksand);
+  font-weight: 400;
+}
+
+h3 {
+  font-family: var(--font-playfair);
 }
 
 p,
 button {
-  font-family: var(--font-figtree);
-  font-weight: 300;
+  font-family: var(--font-quicksand);
+  font-weight: 400;
 }
 
 p {

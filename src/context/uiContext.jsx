@@ -3,26 +3,20 @@ import PropTypes from "prop-types";
 
 export const UIContext = createContext(null);
 
-const OPEN_LEFT_SLIDE = "OPEN_LEFT_SLIDE";
-const OPEN_RIGHT_SLIDE = "OPEN_RIGHT_SLIDE";
-const OPEN_BOTTOM_SLIDE = "OPEN_BOTTOM_SLIDE";
+const SET_ACTIVE_SLIDE = "SET_ACTIVE_SLIDE";
+const CLOSE_SLIDES = "CLOSE_SLIDES";
 
 function uiReducer(state, action) {
   switch (action.type) {
-    case OPEN_LEFT_SLIDE:
+    case SET_ACTIVE_SLIDE:
       return {
         ...state,
-        leftSlideVisible: !state.leftSlideVisible,
+        activeSlideDirection: action.payload,
       };
-    case OPEN_RIGHT_SLIDE:
+    case CLOSE_SLIDES:
       return {
         ...state,
-        rightSlideVisible: !state.rightSlideVisible,
-      };
-    case OPEN_BOTTOM_SLIDE:
-      return {
-        ...state,
-        bottomSlideVisible: !state.bottomSlideVisible,
+        activeSlideDirection: null,
       };
     default:
       return state;
@@ -30,9 +24,7 @@ function uiReducer(state, action) {
 }
 
 const initialState = {
-  leftSlideVisible: false,
-  rightSlideVisible: false,
-  bottomSlideVisible: false,
+  activeSlideDirection: null,
 };
 
 export default function UIProvider({ children }) {

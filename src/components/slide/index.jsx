@@ -1,35 +1,40 @@
 import PropTypes from "prop-types";
 import Button from "../button";
-import useToggleSlide from "../../hooks/useToggleSlide";
 import { useContext } from "react";
 import { UIContext } from "../../context/uiContext";
 import "./styles.scss";
 
 export default function Slide({ direction, content, className, button }) {
-  const { state } = useContext(UIContext);
-  const handleToggleSlide = useToggleSlide();
+  const { state, uiDispatch } = useContext(UIContext);
   const Component = content;
 
-  function getContext() {
-    switch (direction) {
-      case "left":
-        return state.leftSlideVisible;
-      case "bottom":
-        return state.bottomSlideVisible;
-      case "right":
-        return state.rightSlideVisible;
-      default:
-        break;
+  const isActiveSlide = state.activeSlideDirection === direction;
+
+  const handleToggleSlide = () => {
+    if (isActiveSlide) {
+      uiDispatch({ type: "CLOSE_SLIDES" });
+    } else {
+      uiDispatch({ type: "SET_ACTIVE_SLIDE", payload: direction });
     }
-  }
+  };
+
+  const offScreenClass =
+    state.activeSlideDirection && !isActiveSlide
+      ? `slide-offscreen-${state.activeSlideDirection}`
+      : "";
 
   return (
-    <div className={`${className}`} data-visible={getContext() ? true : false}>
+    <div
+      className={`${className} ${
+        isActiveSlide ? "active-slide" : ""
+      } ${offScreenClass}`}
+      data-visible={isActiveSlide}
+    >
       <Component />
       <Button
         type={button.type}
         icon={<button.icon />}
-        handleAction={() => handleToggleSlide(button.actionDirection)}
+        handleAction={handleToggleSlide}
       />
     </div>
   );

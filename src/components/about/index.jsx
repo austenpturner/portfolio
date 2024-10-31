@@ -1,7 +1,9 @@
+import styles from "./about.module.scss";
+
 export default function About() {
   return (
-    <div>
-      <h3>About</h3>
+    <div className={styles.about}>
+      <h3 className={styles.header}>About.</h3>
     </div>
   );
 }
