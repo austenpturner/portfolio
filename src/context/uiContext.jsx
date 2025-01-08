@@ -3,21 +3,10 @@ import PropTypes from "prop-types";
 
 export const UIContext = createContext(null);
 
-const SET_ACTIVE_SLIDE = "SET_ACTIVE_SLIDE";
-const CLOSE_SLIDES = "CLOSE_SLIDES";
+// const SET_ACTIVE_SLIDE = "SET_ACTIVE_SLIDE";
 
 function uiReducer(state, action) {
   switch (action.type) {
-    case SET_ACTIVE_SLIDE:
-      return {
-        ...state,
-        activeSlideDirection: action.payload,
-      };
-    case CLOSE_SLIDES:
-      return {
-        ...state,
-        activeSlideDirection: null,
-      };
     default:
       return state;
   }

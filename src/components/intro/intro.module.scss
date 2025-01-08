@@ -1,0 +1,30 @@
+@use "../../styles/util/" as *;
+
+.intro {
+  @include grid-parent(repeat(3, auto), repeat(3, 1fr));
+  height: 80vh;
+  position: relative;
+  .header {
+    @include grid-child(2, 2);
+    padding: rem(20);
+    h1,
+    h2 {
+      color: var(--dark-text);
+      margin: 0;
+      text-align: center;
+    }
+    h1 {
+      font-size: rem(64);
+    }
+    h2 {
+      font-size: rem(32);
+    }
+  }
+  img {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    transform: scaleX(-1);
+    width: rem(800);
+  }
+}
