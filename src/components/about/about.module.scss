@@ -1,0 +1,36 @@
+@use "../../styles/util/" as *;
+
+.about {
+  @include grid-parent(100px auto 50%, 100px auto auto 80px, 0);
+  .profilePic {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    height: rem(521);
+    width: rem(400);
+  }
+  .content {
+    background-color: var(--peach);
+    color: var(--light-text);
+    grid-column-start: 3;
+    grid-row-start: 2;
+    padding: rem(50) rem(80) rem(60);
+    h3 {
+      font-size: rem(56);
+      margin: 0;
+    }
+    p {
+      font-size: rem(16);
+      line-height: 1.8;
+      margin: rem(30) 0 0 0;
+    }
+  }
+  .pothosPic {
+    grid-column-start: 3;
+    grid-row-start: 3;
+    justify-self: end;
+    margin-top: rem(-100);
+    // grid-row-end: 4;
+    // width: rem(500);
+  }
+}

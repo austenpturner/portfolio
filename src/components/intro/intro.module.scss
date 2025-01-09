@@ -14,10 +14,16 @@
       text-align: center;
     }
     h1 {
-      font-size: rem(64);
+      font-size: rem(40);
+      @include breakpoint(large) {
+        font-size: rem(64);
+      }
     }
     h2 {
-      font-size: rem(32);
+      font-size: rem(20);
+      @include breakpoint(large) {
+        font-size: rem(32);
+      }
     }
   }
   img {
@@ -25,6 +31,9 @@
     left: 0;
     position: absolute;
     transform: scaleX(-1);
-    width: rem(800);
+    width: rem(300);
+    @include breakpoint(large) {
+      width: rem(800);
+    }
   }
 }

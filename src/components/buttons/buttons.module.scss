@@ -1,0 +1,39 @@
+@use "../../styles/util/" as *;
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.downloadResume {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  width: rem(85);
+  svg {
+    height: rem(22);
+    width: rem(28);
+    @include breakpoint(large) {
+      height: rem(26);
+      width: rem(32);
+    }
+  }
+  p {
+    display: block;
+    font-size: rem(14);
+    margin: 0;
+    text-align: right;
+    @include breakpoint(large) {
+      font-size: rem(16);
+    }
+  }
+}
+
+.light {
+  color: var(--light-text);
+}

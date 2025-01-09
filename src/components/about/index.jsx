@@ -1,12 +1,17 @@
 import me from "../../assets/me.jpg";
-import styles from "./intro.module.scss";
+import pothos from "../../assets/pothos.svg";
+import styles from "./about.module.scss";
+import { about } from "../../config/about";
 
 export default function Intro() {
   return (
     <div className={styles.about}>
-      <div>
-        <img src={me} alt="me" />
+      <img className={styles.profilePic} src={me} alt="me" />
+      <div className={styles.content}>
+        <h3>About</h3>
+        <p>{about.aboutPara}</p>
       </div>
+      <img className={styles.pothosPic} src={pothos} alt="pothos art" />
     </div>
   );
 }

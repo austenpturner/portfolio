@@ -1,6 +1,7 @@
 @use "../util/index" as *;
 
-h1 {
+h1,
+h3 {
   font-family: var(--font-lobster);
   font-weight: 400;
 }
