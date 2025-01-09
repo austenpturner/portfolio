@@ -42,7 +42,7 @@ export default function Nav() {
             </a>
           </li>
         </ul>
-        <DownloadResumeBtn color={"light"} />
+        <DownloadResumeBtn color={width >= 1024 ? "green" : "light"} />
       </nav>
     </>
   );

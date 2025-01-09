@@ -1,13 +1,13 @@
 .overlay {
-  background-color: hsla(0, 0%, 91%, 0.794);
   display: none;
   position: fixed;
   top: 0;
   left: 0;
-  transition: opacity 300ms ease-in-out;
   &[data-visible="true"] {
+    background-color: hsla(0, 0%, 91%, 0.794);
     display: block;
     height: 100vh;
+    transition: background-color 500ms ease-in-out;
     width: 100vw;
     z-index: 1000;
   }

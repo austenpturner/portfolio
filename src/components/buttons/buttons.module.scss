@@ -10,15 +10,27 @@ button {
 }
 
 .downloadResume {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: end;
-  width: rem(85);
+  @include grid-parent(1fr, 22px auto);
+  width: rem(65);
+  @include breakpoint(medium) {
+    @include grid-parent(1fr, 26px auto);
+    width: rem(85);
+  }
+  &:hover {
+    svg {
+      transition: transform 500ms ease-in-out;
+      transform: rotate(380deg);
+    }
+    p {
+      transition: transform 400ms ease-in-out;
+      transform: rotate(5deg);
+    }
+  }
   svg {
+    @include grid-child(1, 1, end, end);
     height: rem(22);
     width: rem(28);
-    @include breakpoint(large) {
+    @include breakpoint(medium) {
       height: rem(26);
       width: rem(32);
     }
@@ -28,7 +40,7 @@ button {
     font-size: rem(14);
     margin: 0;
     text-align: right;
-    @include breakpoint(large) {
+    @include breakpoint(medium) {
       font-size: rem(16);
     }
   }
@@ -36,4 +48,8 @@ button {
 
 .light {
   color: var(--light-text);
+}
+
+.green {
+  color: var(--green);
 }
