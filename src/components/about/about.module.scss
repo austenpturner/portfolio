@@ -2,7 +2,7 @@
 
 .about {
   background-color: var(--light-background);
-  padding-bottom: rem(100);
+  padding-bottom: rem(20);
   @include grid-parent(20px 10vw 50vw auto, 30px auto 30px auto 80px);
   @include breakpoint(medium) {
     @include grid-parent(30px auto 40px auto, 30px 180px auto auto 80px);
@@ -69,14 +69,7 @@
     }
     h3 {
       @include grid-child(2, 2);
-      font-size: rem(36);
       margin: 0;
-      @include breakpoint(medium) {
-        font-size: rem(48);
-      }
-      @include breakpoint(large) {
-        font-size: rem(56);
-      }
     }
     p {
       align-self: start;

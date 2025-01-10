@@ -6,9 +6,23 @@ h3 {
   font-weight: 400;
 }
 
-h2 {
+h2,
+h4 {
   font-family: var(--font-lora);
   font-weight: 400;
+}
+
+h3 {
+  font-size: rem(36);
+  @include breakpoint(medium) {
+    font-size: rem(48);
+  }
+  @include breakpoint(large) {
+    font-size: rem(56);
+  }
+  @include breakpoint(xlarge) {
+    font-size: rem(64);
+  }
 }
 
 p,

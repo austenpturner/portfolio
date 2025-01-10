@@ -1,0 +1,20 @@
+@use "../../styles/util/" as *;
+
+.portfolio {
+  background-color: var(--green);
+  padding: rem(20);
+  @include breakpoint(medium) {
+    padding: rem(30);
+  }
+  @include breakpoint(xlarge) {
+    padding: rem(60) 0 0;
+  }
+  h3 {
+    color: var(--light-text);
+    margin: 0 auto;
+    max-width: rem(1150);
+    @include breakpoint(xlarge) {
+      padding-bottom: rem(40);
+    }
+  }
+}

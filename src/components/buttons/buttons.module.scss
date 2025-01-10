@@ -12,22 +12,11 @@ button {
   }
 }
 
-.downloadResume {
+.downloadResume,
+.liveSiteBtn {
   @include grid-parent(1fr, 22px auto);
-  width: rem(65);
   @include breakpoint(medium) {
     @include grid-parent(1fr, 26px auto);
-    width: rem(85);
-  }
-  &:hover {
-    svg {
-      transition: transform 500ms ease-in-out;
-      transform: rotate(380deg);
-    }
-    p {
-      transition: transform 400ms ease-in-out;
-      transform: rotate(5deg);
-    }
   }
   svg {
     @include grid-child(1, 1, end, end);
@@ -40,11 +29,53 @@ button {
   }
   p {
     display: block;
-    font-size: rem(14);
     margin: 0;
     text-align: right;
+  }
+}
+
+.downloadResume {
+  width: rem(65);
+  @include breakpoint(medium) {
+    width: rem(85);
+  }
+  &:hover {
+    svg {
+      transition: transform 500ms ease-in-out;
+      transform: rotate(380deg);
+    }
+    p {
+      transition: transform 400ms ease-in-out;
+      transform: rotate(5deg);
+    }
+  }
+  p {
+    font-size: rem(14);
     @include breakpoint(medium) {
       font-size: rem(16);
+    }
+  }
+}
+
+.liveSiteBtn {
+  @include grid-parent(1fr, 22px auto, rem(4));
+  @include breakpoint(medium) {
+    @include grid-parent(1fr, 26px auto, rem(4));
+  }
+  &:hover {
+    svg {
+      transition: transform 500ms ease-in-out;
+      transform: rotate(330deg);
+    }
+    p {
+      transition: transform 400ms ease-in-out;
+      transform: rotate(-20deg) translateY(5px);
+    }
+  }
+  p {
+    font-size: rem(11);
+    @include breakpoint(medium) {
+      font-size: rem(13);
     }
   }
 }

@@ -2,6 +2,7 @@ import Intro from "../../components/intro";
 import About from "../../components/about";
 import "./styles.scss";
 import Overlay from "../../components/overlay";
+import Portfolio from "../../components/portfolio";
 
 export default function HomePage() {
   return (
@@ -9,6 +10,7 @@ export default function HomePage() {
       <Overlay />
       <Intro />
       <About />
+      <Portfolio />
     </div>
   );
 }

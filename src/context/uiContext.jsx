@@ -25,8 +25,6 @@ const initialState = {
 export default function UIProvider({ children }) {
   const [state, uiDispatch] = useReducer(uiReducer, initialState);
 
-  console.log(state.mobileNavOpen);
-
   return (
     <UIContext.Provider value={{ state, uiDispatch }}>
       {children}
