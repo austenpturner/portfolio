@@ -5,12 +5,20 @@
     calc((100vw - 270px) / 2) 270px calc((100vw - 270px) / 2),
     30% 100px auto
   );
-  height: 80vh;
+  height: 86vh;
   position: relative;
   @include breakpoint(medium) {
-    grid-template-columns: calc((100vw - 400px) / 2) 400px calc(
-        (100vw - 400px) / 2
-      );
+    @include grid-parent(
+      calc((100vw - 400px) / 2) 400px calc((100vw - 400px) / 2),
+      250px 150px auto
+    );
+    height: 90vh;
+  }
+  @include breakpoint(large) {
+    @include grid-parent(
+      calc((100vw - 400px) / 2) 400px calc((100vw - 400px) / 2),
+      250px 200px auto
+    );
   }
   .header {
     @include grid-child(2, 2);
@@ -45,12 +53,16 @@
     grid-column-end: 3;
     margin-top: -5%;
     transform: scaleX(-1);
-    width: 80vw;
+    width: 85vw;
+    @include breakpoint(medium) {
+      width: rem(600);
+    }
     @include breakpoint(large) {
       grid-row-start: 2;
       margin-top: -8%;
-      max-width: rem(850);
-      width: 70vw;
+    }
+    @include breakpoint(xlarge) {
+      width: rem(800);
     }
   }
 }

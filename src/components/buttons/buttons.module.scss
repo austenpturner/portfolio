@@ -7,6 +7,9 @@ button {
   &:hover {
     cursor: pointer;
   }
+  p {
+    line-height: normal;
+  }
 }
 
 .downloadResume {

@@ -8,7 +8,7 @@ export default function HomePage() {
     <div className="home-page">
       <Overlay />
       <Intro />
-      {/* <About /> */}
+      <About />
     </div>
   );
 }
