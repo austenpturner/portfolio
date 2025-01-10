@@ -24,7 +24,7 @@ export default function Nav() {
   return (
     <>
       <HamburgerBtn />
-      <nav data-visible={state.mobileNavOpen}>
+      <nav data-visible={state.mobileNavOpen} className={styles.mainNav}>
         <ul>
           <li>
             <a href="" onClick={handleToggleMobileNav}>

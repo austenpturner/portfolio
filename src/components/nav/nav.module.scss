@@ -1,6 +1,6 @@
 @use "../../styles/util/" as *;
 
-nav {
+.mainNav {
   @include grid-parent(auto, 1fr auto);
   background-color: var(--light-background);
   position: absolute;
