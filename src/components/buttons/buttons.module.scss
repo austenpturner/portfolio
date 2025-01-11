@@ -15,7 +15,7 @@ button {
   }
 }
 
-.downloadResume,
+.downloadResume a,
 .liveSiteBtn a {
   @include grid-parent(1fr, 22px auto);
   @include breakpoint(medium) {
@@ -37,7 +37,7 @@ button {
   }
 }
 
-.downloadResume {
+.downloadResume a {
   width: rem(65);
   z-index: 20;
   @include breakpoint(medium) {

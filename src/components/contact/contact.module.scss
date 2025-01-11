@@ -38,15 +38,21 @@
     @include breakpoint(medium) {
       @include grid-child(4, 2, center, end);
     }
-    p {
-      margin: rem(5) 0;
+    .link {
+      color: var(--dark-text);
+      display: block;
+      margin: rem(8) 0;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
       @include breakpoint(medium) {
         font-size: rem(18);
-        margin: rem(8) 0;
+        margin: rem(12) 0;
       }
       @include breakpoint(large) {
         font-size: rem(19);
-        margin: rem(6) 0;
+        margin: rem(14) 0;
       }
     }
   }
@@ -54,6 +60,7 @@
     @include grid-parent(1fr, repeat(3, 1fr), rem(14));
     @include grid-child(2, 1, start, center);
     margin-top: rem(10);
+    z-index: 50;
     @include breakpoint(medium) {
       @include grid-parent(repeat(3, 1fr), 1fr, rem(30));
       @include grid-child(3, 2, center, center);
@@ -66,6 +73,10 @@
       svg {
         height: rem(30);
         width: rem(30);
+        &:hover {
+          transition: transform 300ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+          transform: translateY(-8px);
+        }
         @include breakpoint(medium) {
           height: rem(40);
           width: rem(40);

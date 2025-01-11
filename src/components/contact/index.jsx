@@ -1,5 +1,5 @@
 import styles from "./contact.module.scss";
-import { socials } from "../../config/connect";
+import { contact, socials } from "../../config/connect";
 import pothos from "../../assets/pothos.svg";
 import DownloadResumeBtn from "../buttons/downloadResume";
 
@@ -8,8 +8,21 @@ export default function Contact() {
     <section className={styles.contact}>
       <h3>Contact</h3>
       <div className={styles.contactLinks}>
-        <p>send me a message</p>
-        <p>find me on LinkedIn</p>
+        {contact.map((type) => {
+          return (
+            <a
+              key={type.id}
+              href={type.link}
+              target="_blank"
+              rel="noreferrer"
+              className={styles.link}
+            >
+              {type.text}
+            </a>
+          );
+        })}
+        {/* <p>send me a message</p>
+        <p>find me on LinkedIn</p> */}
       </div>
       <div className={styles.siteLinks}>
         {socials.map((social) => {

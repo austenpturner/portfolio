@@ -29,14 +29,14 @@ export const socials = [
 export const contact = [
   {
     id: 1,
-    name: "LinkedIn",
-    icon: FaLinkedin,
-    link: "https://www.linkedin.com/in/austenpturner/",
+    name: "Email",
+    text: "send me a message",
+    link: `mailto:${email}@${carrier}`,
   },
   {
     id: 2,
-    name: "Email",
-    icon: MdOutlineMail,
-    link: `mailto:${email}@${carrier}`,
+    name: "LinkedIn",
+    text: "find me on LinkedIn",
+    link: "https://www.linkedin.com/in/austenpturner/",
   },
 ];

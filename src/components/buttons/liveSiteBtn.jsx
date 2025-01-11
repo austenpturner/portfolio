@@ -3,7 +3,7 @@ import styles from "./buttons.module.scss";
 
 export default function LiveSiteBtn({ color, link, name }) {
   return (
-    <button className={`${styles.liveSiteBtn} `}>
+    <button className={styles.liveSiteBtn}>
       <a
         href={link}
         target="_blank"
