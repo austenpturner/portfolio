@@ -22,7 +22,7 @@ export default function Project({ content }) {
         src={content.iPadImage}
         alt="project image"
       />
-      <LiveSiteBtn color={"light"} />
+      <LiveSiteBtn color={"light"} link={content.link} name={content.title} />
     </div>
   );
 }

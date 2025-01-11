@@ -6,18 +6,21 @@ import shoppingCartIpad from "../assets/react-shopping-cart-screenshots/reactCar
 export const projects = [
   {
     id: 1,
-    title: "Pacific Therapy",
-    description:
-      "An example website mockup built with React and styled with Sass.",
-    desktopImage: pacificTherapyDesktop,
-    iPadImage: pacificTherapyIpad,
-  },
-  {
-    id: 2,
     title: "React Shopping Cart",
     description:
       "A shopping app with user authentication built with React, Redux, and Firebase.",
+    link: "https://austenpturner.github.io/react-shopping-cart-2.0/",
     desktopImage: shoppingCartDesktop,
     iPadImage: shoppingCartIpad,
+  },
+  {
+    id: 2,
+    title: "Pacific Therapy",
+    description:
+      "An example website mockup built with React and styled with Sass.",
+    link: "https://austenpturner.github.io/healthcare-website-mockup/",
+
+    desktopImage: pacificTherapyDesktop,
+    iPadImage: pacificTherapyIpad,
   },
 ];

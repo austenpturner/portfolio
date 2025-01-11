@@ -7,13 +7,16 @@ button {
   &:hover {
     cursor: pointer;
   }
+  a {
+    text-decoration: none;
+  }
   p {
     line-height: normal;
   }
 }
 
 .downloadResume,
-.liveSiteBtn {
+.liveSiteBtn a {
   @include grid-parent(1fr, 22px auto);
   @include breakpoint(medium) {
     @include grid-parent(1fr, 26px auto);
@@ -58,7 +61,7 @@ button {
   }
 }
 
-.liveSiteBtn {
+.liveSiteBtn a {
   @include grid-parent(1fr, 22px auto, rem(4));
   @include breakpoint(medium) {
     @include grid-parent(1fr, 26px auto, rem(4));
