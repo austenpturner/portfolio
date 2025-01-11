@@ -21,8 +21,6 @@ export default function Contact() {
             </a>
           );
         })}
-        {/* <p>send me a message</p>
-        <p>find me on LinkedIn</p> */}
       </div>
       <div className={styles.siteLinks}>
         {socials.map((social) => {
