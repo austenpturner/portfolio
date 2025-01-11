@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react";
+import { createContext, useEffect, useReducer } from "react";
 import PropTypes from "prop-types";
 
 export const UIContext = createContext(null);
@@ -24,6 +24,14 @@ const initialState = {
 
 export default function UIProvider({ children }) {
   const [state, uiDispatch] = useReducer(uiReducer, initialState);
+
+  useEffect(() => {
+    if (state.overlayVisible) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  }, [state.overlayVisible]);
 
   return (
     <UIContext.Provider value={{ state, uiDispatch }}>
