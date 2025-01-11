@@ -4,11 +4,11 @@ import Project from "../project";
 
 export default function Portfolio() {
   return (
-    <div className={styles.portfolio}>
+    <section className={styles.portfolio} id="portfolio">
       <h3>Portfolio</h3>
       {projects.map((project) => {
         return <Project key={project.id} content={project} />;
       })}
-    </div>
+    </section>
   );
 }

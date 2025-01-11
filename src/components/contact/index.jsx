@@ -5,7 +5,7 @@ import DownloadResumeBtn from "../buttons/downloadResume";
 
 export default function Contact() {
   return (
-    <section className={styles.contact}>
+    <section className={styles.contact} id="contact">
       <h3>Contact</h3>
       <div className={styles.contactLinks}>
         {contact.map((type) => {

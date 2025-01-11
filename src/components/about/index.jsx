@@ -10,7 +10,7 @@ export default function Intro() {
   });
 
   return (
-    <div className={styles.about}>
+    <section className={styles.about} id="about">
       <img className={styles.profilePic} src={me} alt="me" />
       <div className={styles.content}>
         <h3>About</h3>
@@ -19,6 +19,6 @@ export default function Intro() {
         </p>
       </div>
       <img className={styles.pothosPic} src={pothos} alt="pothos art" />
-    </div>
+    </section>
   );
 }
