@@ -36,6 +36,7 @@ button {
 
 .downloadResume {
   width: rem(65);
+  z-index: 20;
   @include breakpoint(medium) {
     width: rem(85);
   }
