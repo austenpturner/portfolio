@@ -1,5 +1,5 @@
 import pacificTherapyDesktop from "../assets/healthcare-mockup-screenshots/pacificTherapy-landing.png";
-import pacificTherapyIpad from "../assets/healthcare-mockup-screenshots/pacificTherapyiPad-AboutUs.png";
+import pacificTherapyIpad from "../assets/healthcare-mockup-screenshots/pacificTherapyiPad-OurServices.png";
 import shoppingCartDesktop from "../assets/react-shopping-cart-screenshots/reactCart-favorites.png";
 import shoppingCartIpad from "../assets/react-shopping-cart-screenshots/reactCartiPad-cart.png";
 
