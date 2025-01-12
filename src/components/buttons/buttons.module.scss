@@ -92,3 +92,30 @@ button {
 .green {
   color: var(--green);
 }
+
+.scrollToTopBtn {
+  background-color: var(--dark-text);
+  border-radius: 50%;
+  color: var(--light-text);
+  padding: 4px 6px;
+  position: fixed;
+  bottom: rem(10);
+  right: rem(10);
+  z-index: 1000;
+  &:hover {
+    box-shadow: -2px 5px 10px var(--box-shadow);
+    background-color: var(--darker-grey);
+    transition: transform 200ms ease-in-out;
+    transform: translateY(-2px);
+  }
+  svg {
+    height: rem(20);
+    width: rem(20);
+    @include breakpoint(large) {
+      bottom: rem(20);
+      right: rem(20);
+      height: rem(24);
+      width: rem(24);
+    }
+  }
+}

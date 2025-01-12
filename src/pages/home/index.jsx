@@ -5,6 +5,7 @@ import Overlay from "../../components/overlay";
 import Portfolio from "../../components/portfolio";
 import Contact from "../../components/contact";
 import useSmoothScroll from "../../hooks/useSmoothScroll";
+import ScrollToTopBtn from "../../components/buttons/scrollToTopBtn";
 
 export default function HomePage() {
   useSmoothScroll();
@@ -15,6 +16,7 @@ export default function HomePage() {
       <About />
       <Portfolio />
       <Contact />
+      <ScrollToTopBtn />
     </div>
   );
 }
