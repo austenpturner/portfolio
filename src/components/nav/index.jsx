@@ -4,15 +4,19 @@ import HamburgerBtn from "../hamburger";
 import styles from "./nav.module.scss";
 import { UIContext } from "../../context/uiContext";
 import useWindowResize from "../../hooks/useWindowResize";
+import useSmoothScroll from "../../hooks/useSmoothScroll";
 
 export default function Nav() {
   const { state, uiDispatch } = useContext(UIContext);
   const { width } = useWindowResize();
+  const smoothScrollTo = useSmoothScroll();
 
   function handleToggleMobileNav(event) {
     event.preventDefault();
     const targetId = event.currentTarget.getAttribute("href").slice(1);
-    document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
+
+    smoothScrollTo(targetId, 1000);
+
     uiDispatch({ type: "TOGGLE_MOBILE_NAV", payload: !state.mobileNavOpen });
     uiDispatch({ type: "TOGGLE_OVERLAY", payload: false });
   }

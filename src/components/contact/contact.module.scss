@@ -116,8 +116,8 @@
     }
   }
   .copyright {
-    @include grid-child(2, 5, center, center);
-    grid-column-end: 6;
+    @include grid-child(3, 5, center, center);
+    grid-column-end: 4;
     font-size: rem(11);
     @include breakpoint(medium) {
       font-size: rem(13);
