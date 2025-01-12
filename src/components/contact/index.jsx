@@ -2,8 +2,13 @@ import styles from "./contact.module.scss";
 import { contact, socials } from "../../config/connect";
 import pothos from "../../assets/pothos.svg";
 import DownloadResumeBtn from "../buttons/downloadResume";
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 export default function Contact() {
+  const { isVisible, elementRef } = useIntersectionObserver({
+    threshold: 0.1,
+  });
+
   return (
     <section className={styles.contact} id="contact">
       <h3>Contact</h3>
@@ -22,7 +27,10 @@ export default function Contact() {
           );
         })}
       </div>
-      <div className={styles.siteLinks}>
+      <div
+        className={`${styles.siteLinks} ${isVisible ? "visible" : "hidden"}`}
+        ref={elementRef}
+      >
         {socials.map((social) => {
           const Icon = social.icon;
           return (
