@@ -1,5 +1,9 @@
 @use "../util/index" as *;
 
+section {
+  min-height: 100vh;
+}
+
 .visible {
   opacity: 1;
   transition: opacity 400ms ease-in;

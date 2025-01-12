@@ -5,23 +5,50 @@ h3 {
   font-family: var(--font-lobster);
   font-weight: 400;
 }
-
 h2,
 h4 {
   font-family: var(--font-lora);
   font-weight: 400;
 }
 
-h3 {
-  font-size: rem(36);
+h1 {
+  font-size: rem(52);
   @include breakpoint(medium) {
-    font-size: rem(48);
+    font-size: rem(74);
   }
   @include breakpoint(large) {
-    font-size: rem(56);
+    font-size: rem(80);
   }
   @include breakpoint(xlarge) {
-    font-size: rem(64);
+    font-size: rem(100);
+  }
+}
+
+h2,
+h4,
+.nav-link {
+  font-size: rem(24);
+  @include breakpoint(medium) {
+    font-size: rem(28);
+  }
+  @include breakpoint(large) {
+    font-size: rem(32);
+  }
+  @include breakpoint(xlarge) {
+    font-size: rem(38);
+  }
+}
+
+h3 {
+  font-size: rem(42);
+  @include breakpoint(medium) {
+    font-size: rem(56);
+  }
+  @include breakpoint(large) {
+    font-size: rem(62);
+  }
+  @include breakpoint(xlarge) {
+    font-size: rem(70);
   }
 }
 

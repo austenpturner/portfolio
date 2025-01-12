@@ -1,42 +1,29 @@
 @use "../../styles/util/" as *;
 
 .contact {
-  @include grid-parent(
-    20px calc(27% - 20px) 46% calc(27% - 20px) 20px,
-    40px 100px auto auto 70px
-  );
+  @include grid-parent(30px auto auto auto 30px, 50px 100px auto auto 70px);
   background-color: var(--light-background);
-  padding: rem(30) 0 rem(10);
+  padding: rem(20) 0 rem(10);
   @include breakpoint(medium) {
     @include grid-parent(
       30px calc(27% - 30px) 46% auto 30px,
-      60px 100px auto auto 70px
+      68px 100px auto auto 70px
     );
   }
   @include breakpoint(large) {
-    @include grid-parent(
-      calc((100% - 825px) / 2) calc(35% - ((100% - 825px) / 2)) 30% auto
-        calc((100% - 825px) / 2),
-      70px 110px auto auto 70px
-    );
+    @include grid-parent(30px 30% auto 30% 30px, 70px 110px auto auto 70px);
   }
   @include breakpoint(xlarge) {
     @include grid-parent(10vw 20% 40% auto 10vw, 80px 120px auto auto 70px);
     padding: rem(60) 0 rem(20);
   }
   h3 {
-    @include grid-child(3, 1, stretch, center);
+    @include grid-child(4, 1, stretch, end);
     display: inline;
     margin: 0;
-    @include breakpoint(medium) {
-      @include grid-child(4, 1, stretch, end);
-    }
   }
   .contactLinks {
-    @include grid-child(3, 2, center, center);
-    @include breakpoint(medium) {
-      @include grid-child(4, 2, center, end);
-    }
+    @include grid-child(4, 2, center, end);
     .link {
       color: var(--dark-text);
       display: block;
@@ -58,8 +45,8 @@
   }
   .siteLinks {
     @include grid-parent(1fr, repeat(3, 1fr), rem(14));
-    @include grid-child(2, 1, start, center);
-    margin-top: rem(10);
+    @include grid-child(2, 1, start, end);
+    margin-top: rem(12);
     z-index: 50;
     @include breakpoint(medium) {
       @include grid-parent(repeat(3, 1fr), 1fr, rem(30));
@@ -71,8 +58,8 @@
     a {
       color: var(--dark-text);
       svg {
-        height: rem(30);
-        width: rem(30);
+        height: rem(32);
+        width: rem(32);
         &:hover {
           transition: transform 300ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
           transform: translateX(5px);
@@ -97,27 +84,35 @@
     }
   }
   button {
-    @include grid-child(4, 3, start, start);
+    // @include grid-child(4, 3, start, start);
+    @include grid-child(4, 3, start, end);
+
     z-index: 50;
     @include breakpoint(medium) {
       @include grid-child(4, 3, start, end);
     }
   }
   .pothosImg {
-    @include grid-child(1, 3);
+    @include grid-child(1, 3, start, start);
     grid-column-end: 6;
+    grid-row-end: 5;
     transform: scaleX(-1);
-    width: 95%;
+    width: 100vw;
     @include breakpoint(medium) {
-      @include grid-child(1, 2, start, start);
-      grid-row-end: 5;
       max-width: rem(800);
-      width: 80%;
+      width: 90%;
+    }
+    @include breakpoint(large) {
+      width: 70%;
+    }
+    @include breakpoint(xlarge) {
+      max-width: rem(900);
+      width: 90%;
     }
   }
   .copyright {
-    @include grid-child(3, 5, center, center);
-    grid-column-end: 4;
+    @include grid-child(1, 5, center, center);
+    grid-column-end: 6;
     font-size: rem(11);
     @include breakpoint(medium) {
       font-size: rem(13);

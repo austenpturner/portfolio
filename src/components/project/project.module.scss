@@ -17,16 +17,11 @@
       grid-column-end: 4;
     }
     h4 {
-      font-size: rem(22);
       margin: 0;
       text-align: center;
       @include breakpoint(medium) {
         @include grid-child(1, 1);
-        font-size: rem(26);
         text-align: left;
-      }
-      @include breakpoint(large) {
-        font-size: rem(32);
       }
     }
     p {

@@ -34,17 +34,29 @@ export default function Nav() {
       <nav data-visible={state.mobileNavOpen} className={styles.mainNav}>
         <ul>
           <li>
-            <a href="#about" onClick={handleToggleMobileNav}>
+            <a
+              href="#about"
+              onClick={handleToggleMobileNav}
+              className="nav-link"
+            >
               About
             </a>
           </li>
           <li>
-            <a href="#portfolio" onClick={handleToggleMobileNav}>
+            <a
+              href="#portfolio"
+              onClick={handleToggleMobileNav}
+              className="nav-link"
+            >
               Portfolio
             </a>
           </li>
           <li>
-            <a href="#contact" onClick={handleToggleMobileNav}>
+            <a
+              href="#contact"
+              onClick={handleToggleMobileNav}
+              className="nav-link"
+            >
               Contact
             </a>
           </li>
