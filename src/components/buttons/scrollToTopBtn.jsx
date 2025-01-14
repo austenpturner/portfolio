@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./buttons.module.scss";
 import { IoIosArrowUp } from "react-icons/io";
 
-export default function ScrollToTopBtn() {
+export default function ScrollToTopBtn({ direction }) {
   const [showBtn, setShowBtn] = useState(false);
 
   function scrollToTop() {
