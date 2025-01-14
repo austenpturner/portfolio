@@ -39,7 +39,6 @@
       grid-column-end: 3;
     }
     @include breakpoint(xlarge) {
-      // @include grid-child(2, 2, start, end);
       height: rem(553);
       width: rem(425);
     }
@@ -59,9 +58,7 @@
     @include breakpoint(large) {
       @include grid-parent(11% auto 11%, 30px 70px 15px auto 50px);
       @include grid-child(4, 2, stretch, stretch);
-      grid-column-end: 5;
       grid-row-end: 3;
-      // max-width: rem(700);
     }
     @include breakpoint(xlarge) {
       @include grid-parent(
@@ -98,7 +95,6 @@
       width: 100%;
     }
     @include breakpoint(large) {
-      @include grid-child(3, 3, start, end);
       margin-top: rem(-90);
       max-width: rem(800);
       width: 60vw;
