@@ -2,17 +2,25 @@
 
 .about {
   background-color: var(--light-background);
-  @include grid-parent(20px 6vw 50vw auto, 20px auto 30px auto 60px 20px);
+  padding-bottom: rem(20);
+  @include grid-parent(
+    20px auto min(88vw, 500px),
+    20px auto 30px calc(293px - 30px) 80px 20px
+  );
   @include breakpoint(medium) {
-    @include grid-parent(40px 20vw 50vw auto, 30px auto 40px auto 60px);
+    @include grid-parent(40px 20vw 50vw auto, 20px auto 40px auto 60px);
+    padding: 0;
   }
   @include breakpoint(large) {
-    @include grid-parent(40px auto 50px auto, 30px auto auto auto 80px 20px);
+    @include grid-parent(
+      calc(41% - 380px) 350px 30px 59%,
+      30px 405px auto auto 80px
+    );
   }
   @include breakpoint(xlarge) {
     @include grid-parent(
-      40px auto max(50px, 8%) max(750px, 50%),
-      30px auto auto auto 100px 20px
+      auto 425px max(60px, 5%) max(750px, 55%),
+      30px auto auto auto 100px
     );
   }
   .profilePic {
@@ -23,48 +31,44 @@
     width: rem(225);
     z-index: 100;
     @include breakpoint(medium) {
-      @include grid-child(2, 3, start);
-      grid-column-end: 4;
-      grid-row-end: 5;
       height: rem(456);
       width: rem(350);
     }
     @include breakpoint(large) {
-      @include grid-child(2, 2, start);
+      @include grid-child(2, 2, start, end);
       grid-column-end: 3;
-      grid-row-end: 4;
-      justify-self: center;
-      height: rem(456);
-      width: rem(350);
     }
     @include breakpoint(xlarge) {
-      justify-self: end;
+      // @include grid-child(2, 2, start, end);
       height: rem(553);
       width: rem(425);
     }
   }
   .content {
-    @include grid-parent(10% auto 10%, 30px 40px 18px auto 30px);
+    @include grid-parent(10% auto 10%, 30px 50px 18px auto 30px);
     @include grid-child(3, 2);
-    grid-column-end: 5;
+    grid-column-end: 4;
     grid-row-end: 4;
     background-color: var(--peach);
     border-radius: 5px 0 0 5px;
     color: var(--light-text);
     @include breakpoint(medium) {
-      @include grid-parent(75px 1fr 75px, 50px 65px 18px auto 60px);
+      @include grid-parent(70px auto 70px, 40px 65px 15px auto 60px);
+      grid-column-end: 5;
     }
     @include breakpoint(large) {
-      @include grid-parent(80px auto 80px, 40px 60px 20px auto 60px);
-      @include grid-child(4, 2, stretch, end);
+      @include grid-parent(11% auto 11%, 30px 70px 15px auto 50px);
+      @include grid-child(4, 2, stretch, stretch);
       grid-column-end: 5;
       grid-row-end: 3;
+      // max-width: rem(700);
     }
     @include breakpoint(xlarge) {
       @include grid-parent(
-        max(120px, 18%) auto max(120px, 18%),
-        60px 70px 20px auto 80px
+        max(100px, 16%) auto max(100px, 16%),
+        60px 80px 20px auto 70px
       );
+      max-width: rem(1100);
     }
     h3 {
       @include grid-child(2, 2);
@@ -84,17 +88,20 @@
   .pothosPic {
     display: grid;
     @include grid-child(3, 5, end, end);
-    grid-column-end: 5;
-    grid-row-end: 6;
-    width: 80vw;
+    grid-column-end: 4;
+    grid-row-end: 7;
+    width: 86vw;
     z-index: 200;
     @include breakpoint(medium) {
       @include grid-child(3, 3, start, end);
+      grid-column-end: 5;
       width: 100%;
     }
     @include breakpoint(large) {
-      @include grid-child(4, 3, start, end);
-      margin-top: rem(-80);
+      @include grid-child(3, 3, start, end);
+      margin-top: rem(-90);
+      max-width: rem(800);
+      width: 60vw;
     }
     @include breakpoint(xlarge) {
       margin-top: rem(-120);
