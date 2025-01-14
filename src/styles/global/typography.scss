@@ -57,17 +57,19 @@ li,
 a,
 button {
   font-family: var(--font-figtree);
-  font-weight: 400;
 }
 
 p,
 li {
-  font-size: rem(16);
   font-weight: 300;
 }
 
 p {
+  font-size: rem(14);
   line-height: 1.6;
+  @include breakpoint(medium) {
+    font-size: rem(16);
+  }
   @include breakpoint(xlarge) {
     line-height: 1.8;
   }

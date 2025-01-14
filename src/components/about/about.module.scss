@@ -2,22 +2,20 @@
 
 .about {
   background-color: var(--light-background);
-  padding-bottom: rem(20);
-  @include grid-parent(20px 6vw 50vw auto, 30px auto 30px auto 80px);
+  @include grid-parent(20px 6vw 50vw auto, 20px auto 30px auto 60px 20px);
   @include breakpoint(medium) {
-    @include grid-parent(30px auto 40px auto, 30px 180px auto auto 80px);
+    @include grid-parent(40px 20vw 50vw auto, 30px auto 40px auto 60px);
   }
   @include breakpoint(large) {
-    @include grid-parent(40px auto 50px auto, 30px auto auto auto 80px);
+    @include grid-parent(40px auto 50px auto, 30px auto auto auto 80px 20px);
   }
   @include breakpoint(xlarge) {
     @include grid-parent(
       40px auto max(50px, 8%) max(750px, 50%),
-      30px auto auto auto 100px
+      30px auto auto auto 100px 20px
     );
   }
   .profilePic {
-    // aspect-ratio: auto;
     @include grid-child(2, 3, start);
     grid-column-end: 4;
     grid-row-end: 5;
@@ -25,9 +23,11 @@
     width: rem(225);
     z-index: 100;
     @include breakpoint(medium) {
-      justify-self: end;
-      height: rem(358);
-      width: rem(275);
+      @include grid-child(2, 3, start);
+      grid-column-end: 4;
+      grid-row-end: 5;
+      height: rem(456);
+      width: rem(350);
     }
     @include breakpoint(large) {
       @include grid-child(2, 2, start);
@@ -52,7 +52,7 @@
     border-radius: 5px 0 0 5px;
     color: var(--light-text);
     @include breakpoint(medium) {
-      @include grid-parent(80px 1fr 70px, 40px 50px 20px auto 60px);
+      @include grid-parent(75px 1fr 75px, 50px 65px 18px auto 60px);
     }
     @include breakpoint(large) {
       @include grid-parent(80px auto 80px, 40px 60px 20px auto 60px);
@@ -74,16 +74,10 @@
       align-self: start;
       grid-column-start: 2;
       grid-row-start: 4;
-      font-size: rem(14);
       margin: 0;
       padding: 0 0 rem(20);
-      // text-align: justify;
       @include breakpoint(medium) {
-        font-size: rem(15);
         padding: 0;
-      }
-      @include breakpoint(large) {
-        font-size: rem(16);
       }
     }
   }
@@ -95,8 +89,7 @@
     width: 80vw;
     z-index: 200;
     @include breakpoint(medium) {
-      @include grid-child(3, 4, start, end);
-      margin-top: rem(-60);
+      @include grid-child(3, 3, start, end);
       width: 100%;
     }
     @include breakpoint(large) {

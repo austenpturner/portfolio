@@ -1,7 +1,7 @@
 @use "../../styles/util/" as *;
 
 .intro {
-  @include grid-parent(10% 80% 10%, 30% auto auto);
+  @include grid-parent(5% 90% 5%, 30% auto auto);
   height: 100vh;
   position: relative;
   @include breakpoint(medium) {
