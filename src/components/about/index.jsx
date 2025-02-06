@@ -11,14 +11,19 @@ export default function Intro() {
 
   return (
     <section className={styles.about} id="about">
-      <img className={styles.profilePic} src={me} alt="me" />
+      <img className={styles.profilePic} src={me} alt="picture of Austen" />
       <div className={styles.content}>
         <h3>About</h3>
         <p ref={elementRef} className={isVisible ? "visible" : "hidden"}>
           {about.aboutPara}
         </p>
       </div>
-      <img className={styles.pothosPic} src={pothos} alt="pothos art" />
+      <img
+        className={styles.pothosPic}
+        src={pothos}
+        alt="plant vine art"
+        aria-hidden={true}
+      />
     </section>
   );
 }

@@ -47,7 +47,12 @@ export default function Contact() {
         })}
       </div>
       <DownloadResumeBtn color={"green"} />
-      <img className={styles.pothosImg} src={pothos} alt="pothos art" />
+      <img
+        className={styles.pothosImg}
+        src={pothos}
+        alt="plant vine art"
+        aria-hidden={true}
+      />
       <p className={styles.copyright}>made by Austen P. Turner, 2024</p>
     </section>
   );

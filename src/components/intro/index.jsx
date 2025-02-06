@@ -10,7 +10,7 @@ export default function Intro() {
         <h1>Austen Turner</h1>
         <h2>Frontend Developer</h2>
       </div>
-      <img src={pothos} alt="pothos art" />
+      <img src={pothos} alt="plant vine art" aria-hidden={true} />
     </section>
   );
 }
