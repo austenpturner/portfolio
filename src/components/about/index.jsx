@@ -3,9 +3,6 @@ import pothos from "../../assets/pothos.svg";
 import styles from "./about.module.scss";
 import { about } from "../../config/about";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
-import { FaLongArrowAltRight } from "react-icons/fa";
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import { IoOpenOutline } from "react-icons/io5";
 
 export default function Intro() {
   const { isVisible, elementRef } = useIntersectionObserver({
