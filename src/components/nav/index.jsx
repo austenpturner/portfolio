@@ -1,15 +1,18 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useRef } from "react";
 import DownloadResumeBtn from "../buttons/downloadResume";
 import HamburgerBtn from "../hamburger";
 import styles from "./nav.module.scss";
 import { UIContext } from "../../context/uiContext";
 import useWindowResize from "../../hooks/useWindowResize";
 import useSmoothScroll from "../../hooks/useSmoothScroll";
+import useFocusTrap from "../../hooks/useFocusTrap";
+import { navItems } from "../../config/nav";
 
 export default function Nav() {
   const { state, uiDispatch } = useContext(UIContext);
   const { width } = useWindowResize();
   const smoothScrollTo = useSmoothScroll();
+  const navRef = useRef(null);
 
   function handleToggleMobileNav(event) {
     event.preventDefault();
@@ -26,42 +29,42 @@ export default function Nav() {
       uiDispatch({ type: "TOGGLE_MOBILE_NAV", payload: false });
       uiDispatch({ type: "TOGGLE_OVERLAY", payload: false });
     }
-  }, [width]);
+  }, [width, uiDispatch]);
+
+  useFocusTrap(state.mobileNavOpen, navRef, () => {
+    uiDispatch({ type: "TOGGLE_MOBILE_NAV", payload: false });
+    uiDispatch({ type: "TOGGLE_OVERLAY", payload: false });
+  });
 
   return (
     <>
       <HamburgerBtn />
-      <nav data-visible={state.mobileNavOpen} className={styles.mainNav}>
+      <nav
+        ref={navRef}
+        data-visible={state.mobileNavOpen}
+        className={styles.mainNav}
+        aria-hidden={!state.mobileNavOpen}
+      >
         <ul>
-          <li>
-            <a
-              href="#about"
-              onClick={handleToggleMobileNav}
-              className="nav-link"
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="#portfolio"
-              onClick={handleToggleMobileNav}
-              className="nav-link"
-            >
-              Portfolio
-            </a>
-          </li>
-          <li>
-            <a
-              href="#contact"
-              onClick={handleToggleMobileNav}
-              className="nav-link"
-            >
-              Contact
-            </a>
-          </li>
+          {navItems.map((item) => {
+            return (
+              <li key={item.id}>
+                <a
+                  href={item.url}
+                  onClick={handleToggleMobileNav}
+                  className="nav-link"
+                  tabIndex={!state.mobileNavOpen && -1}
+                >
+                  {item.name}
+                </a>
+              </li>
+            );
+          })}
         </ul>
-        <DownloadResumeBtn color={width >= 1024 ? "green" : "light"} />
+        <DownloadResumeBtn
+          color={width >= 1024 ? "green" : "light"}
+          tabIndex={!state.mobileNavOpen && -1}
+        />
       </nav>
     </>
   );

@@ -1,9 +1,10 @@
 import { IoArrowRedoSharp } from "react-icons/io5";
+import PropTypes from "prop-types";
 import styles from "./buttons.module.scss";
 
 export default function LiveSiteBtn({ color, link, name }) {
   return (
-    <button className={styles.liveSiteBtn}>
+    <button className={styles.liveSiteBtn} tabIndex={-1}>
       <a
         href={link}
         target="_blank"
@@ -17,3 +18,9 @@ export default function LiveSiteBtn({ color, link, name }) {
     </button>
   );
 }
+
+LiveSiteBtn.propTypes = {
+  color: PropTypes.string,
+  link: PropTypes.string,
+  name: PropTypes.string,
+};
