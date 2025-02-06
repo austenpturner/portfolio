@@ -83,7 +83,7 @@
       }
     }
   }
-  a[aria-label="download resume"] {
+  a[aria-label="download Austen's resume"] {
     @include grid-child(4, 3, start, end);
     z-index: 50;
     @include breakpoint(medium) {
