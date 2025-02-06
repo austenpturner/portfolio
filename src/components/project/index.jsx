@@ -1,6 +1,8 @@
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import LiveSiteBtn from "../buttons/liveSiteBtn";
+import PropTypes from "prop-types";
 import styles from "./project.module.scss";
+// import GitHubRepoBtn from "../buttons/githubRepoBtn";
 
 export default function Project({ content }) {
   const { isVisible, elementRef } = useIntersectionObserver({
@@ -34,3 +36,7 @@ export default function Project({ content }) {
     </div>
   );
 }
+
+Project.propTypes = {
+  content: PropTypes.object,
+};

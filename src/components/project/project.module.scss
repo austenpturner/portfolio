@@ -3,7 +3,7 @@
 .project {
   @include grid-parent(1fr, 10px auto auto auto auto 20px, 20px);
   @include breakpoint(medium) {
-    @include grid-parent(auto auto 20px 50px, 50px auto 140px auto 60px);
+    @include grid-parent(auto auto 20px 100px, 50px auto 140px auto 60px);
     margin: 0 auto;
     max-width: rem(825);
   }
@@ -76,7 +76,7 @@
     }
   }
   a {
-    @include grid-child(1, 5);
+    @include grid-child(1, 5, end, end);
     margin-top: rem(-10);
     @include breakpoint(medium) {
       @include grid-child(4, 2, start, start);

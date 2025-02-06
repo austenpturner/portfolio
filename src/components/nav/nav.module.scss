@@ -6,6 +6,7 @@
   position: absolute;
   right: rem(30);
   top: rem(20);
+  z-index: 7000;
   @include breakpoint-down(medium) {
     @include grid-parent(1fr 140px 1fr, 1fr 150px 1fr);
     background-color: var(--green);

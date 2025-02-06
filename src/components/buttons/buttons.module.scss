@@ -14,13 +14,14 @@ a {
 }
 
 .downloadResume,
-.liveSiteBtn {
-  @include grid-parent(1fr, 22px auto);
+.liveSiteBtn,
+.githubRepoBtn {
+  @include grid-parent(auto, 22px auto, rem(4));
+  cursor: pointer;
   @include breakpoint(medium) {
-    @include grid-parent(1fr, 26px auto);
+    @include grid-parent(auto, 26px auto, rem(4), center, center);
   }
   svg {
-    @include grid-child(1, 1, end, end);
     height: rem(22);
     width: rem(28);
     @include breakpoint(medium) {
@@ -31,7 +32,25 @@ a {
   p {
     display: block;
     margin: 0;
+  }
+}
+
+.downloadResume,
+.liveSiteBtn {
+  svg {
+    @include grid-child(1, 1, end, end);
+  }
+  p {
     text-align: right;
+  }
+}
+
+.githubRepoBtn {
+  svg {
+    @include grid-child(1, 1, center, center);
+  }
+  p {
+    text-align: center;
   }
 }
 
@@ -59,10 +78,18 @@ a {
   }
 }
 
+.liveSiteBtn,
+.githubRepoBtn {
+  p {
+    font-size: rem(12);
+    @include breakpoint(medium) {
+      font-size: rem(13);
+    }
+  }
+}
+
 .liveSiteBtn {
-  @include grid-parent(1fr, 22px auto, rem(4));
   @include breakpoint(medium) {
-    @include grid-parent(1fr, 26px auto, rem(4));
     &:hover {
       svg {
         transition: transform 500ms ease-in-out;
@@ -70,15 +97,8 @@ a {
       }
       p {
         transition: transform 400ms ease-in-out;
-        transform: rotate(-20deg) translateY(5px);
+        transform: rotate(-10deg) translateY(5px);
       }
-    }
-  }
-
-  p {
-    font-size: rem(11);
-    @include breakpoint(medium) {
-      font-size: rem(13);
     }
   }
 }
