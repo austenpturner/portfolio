@@ -14,10 +14,9 @@ export default function HamburgerBtn() {
     <button
       aria-label={state.mobileNavOpen ? "close navigation" : "open navigation"}
       aria-expanded={state.mobileNavOpen}
-      aria-controls="categoryMenu"
+      aria-controls="site navigation"
       className={styles.mobileNavBtn}
       onClick={handleToggleMobileNav}
-      //   tabIndex={state.modal.isVisible || state.accountViewListOpen ? "-1" : "0"}
     >
       <svg
         className={styles.hamburger}

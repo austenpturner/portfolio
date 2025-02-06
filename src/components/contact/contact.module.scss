@@ -83,10 +83,8 @@
       }
     }
   }
-  button {
-    // @include grid-child(4, 3, start, start);
+  a[aria-label="download resume"] {
     @include grid-child(4, 3, start, end);
-
     z-index: 50;
     @include breakpoint(medium) {
       @include grid-child(4, 3, start, end);

@@ -75,10 +75,14 @@
       align-self: start;
       grid-column-start: 2;
       grid-row-start: 4;
+      line-height: 1.6;
       margin: 0;
       padding: 0 0 rem(20);
       @include breakpoint(medium) {
         padding: 0;
+      }
+      @include breakpoint(xlarge) {
+        line-height: 1.8;
       }
     }
   }

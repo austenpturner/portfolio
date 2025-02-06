@@ -75,7 +75,7 @@
       width: 60%;
     }
   }
-  button {
+  a {
     @include grid-child(1, 5);
     margin-top: rem(-10);
     @include breakpoint(medium) {

@@ -36,6 +36,8 @@ export default function Nav() {
     uiDispatch({ type: "TOGGLE_OVERLAY", payload: false });
   });
 
+  console.log(state.mobileNavOpen);
+
   return (
     <>
       <HamburgerBtn />
@@ -43,7 +45,7 @@ export default function Nav() {
         ref={navRef}
         data-visible={state.mobileNavOpen}
         className={styles.mainNav}
-        aria-hidden={!state.mobileNavOpen}
+        aria-hidden={width > 1023 ? false : !state.mobileNavOpen}
       >
         <ul>
           {navItems.map((item) => {
@@ -53,7 +55,7 @@ export default function Nav() {
                   href={item.url}
                   onClick={handleToggleMobileNav}
                   className="nav-link"
-                  tabIndex={!state.mobileNavOpen && -1}
+                  tabIndex={width < 1024 && !state.mobileNavOpen ? -1 : 0}
                 >
                   {item.name}
                 </a>
@@ -63,7 +65,7 @@ export default function Nav() {
         </ul>
         <DownloadResumeBtn
           color={width >= 1024 ? "green" : "light"}
-          tabIndex={!state.mobileNavOpen && -1}
+          tabIndex={width < 1024 && !state.mobileNavOpen ? -1 : 0}
         />
       </nav>
     </>

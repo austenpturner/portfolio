@@ -7,16 +7,14 @@ button {
   &:hover {
     cursor: pointer;
   }
-  a {
-    text-decoration: none;
-  }
-  p {
-    line-height: normal;
-  }
 }
 
-.downloadResume a,
-.liveSiteBtn a {
+a {
+  text-decoration: none;
+}
+
+.downloadResume,
+.liveSiteBtn {
   @include grid-parent(1fr, 22px auto);
   @include breakpoint(medium) {
     @include grid-parent(1fr, 26px auto);
@@ -37,7 +35,7 @@ button {
   }
 }
 
-.downloadResume a {
+.downloadResume {
   width: rem(65);
   z-index: 20;
   @include breakpoint(medium) {
@@ -61,7 +59,7 @@ button {
   }
 }
 
-.liveSiteBtn a {
+.liveSiteBtn {
   @include grid-parent(1fr, 22px auto, rem(4));
   @include breakpoint(medium) {
     @include grid-parent(1fr, 26px auto, rem(4));
@@ -113,33 +111,6 @@ button {
     width: rem(20);
     @include breakpoint(large) {
       bottom: rem(20);
-      right: rem(20);
-      height: rem(24);
-      width: rem(24);
-    }
-  }
-}
-
-.scrollToSectionBtn {
-  background-color: var(--dark-text);
-  border-radius: 50%;
-  color: var(--light-text);
-  padding: 4px 6px;
-  position: fixed;
-  top: rem(10);
-  right: rem(10);
-  z-index: 1000;
-  &:hover {
-    box-shadow: -2px 5px 10px var(--box-shadow);
-    background-color: var(--darker-grey);
-    transition: transform 200ms ease-in-out;
-    transform: translateY(-2px);
-  }
-  svg {
-    height: rem(20);
-    width: rem(20);
-    @include breakpoint(large) {
-      top: rem(20);
       right: rem(20);
       height: rem(24);
       width: rem(24);
