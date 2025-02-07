@@ -1,11 +1,13 @@
 import { useEffect, useRef } from "react";
 
-const useFocusTrap = (isOpen, containerRef, closeNav) => {
+const useFocusTrap = (screenWidth, isOpen, containerRef, closeNav) => {
   const firstFocusableRef = useRef(null);
   const lastFocusableRef = useRef(null);
   const prevFocusedElement = useRef(null);
 
   useEffect(() => {
+    if (screenWidth >= 1024) return;
+
     if (isOpen && containerRef.current) {
       // Save the element that was focused before opening the nav
       prevFocusedElement.current = document.activeElement;
@@ -53,7 +55,7 @@ const useFocusTrap = (isOpen, containerRef, closeNav) => {
         prevFocusedElement.current?.focus();
       };
     }
-  }, [isOpen, containerRef, closeNav]);
+  }, [isOpen, containerRef, closeNav, screenWidth]);
 };
 
 export default useFocusTrap;

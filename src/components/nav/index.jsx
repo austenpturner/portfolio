@@ -31,7 +31,7 @@ export default function Nav() {
     }
   }, [width, uiDispatch]);
 
-  useFocusTrap(state.mobileNavOpen, navRef, () => {
+  useFocusTrap(width, state.mobileNavOpen, navRef, () => {
     uiDispatch({ type: "TOGGLE_MOBILE_NAV", payload: false });
     uiDispatch({ type: "TOGGLE_OVERLAY", payload: false });
   });
