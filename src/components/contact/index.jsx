@@ -39,7 +39,7 @@ export default function Contact() {
               href={social.link}
               target="_blank"
               rel="noreferrer"
-              aria-label={social.name}
+              aria-label={`go to Austen's ${social.name}`}
             >
               <Icon />
             </a>
