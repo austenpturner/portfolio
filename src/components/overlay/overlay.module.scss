@@ -1,10 +1,12 @@
+@use "../../styles/util/" as *;
+
 .overlay {
   display: none;
   position: fixed;
   top: 0;
   left: 0;
   &[data-visible="true"] {
-    background-color: hsla(0, 0%, 91%, 0.794);
+    background-color: $light-transparent;
     display: block;
     height: 100vh;
     transition: background-color 500ms ease-in-out;

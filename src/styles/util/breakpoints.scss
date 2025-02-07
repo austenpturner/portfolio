@@ -1,3 +1,5 @@
+@use "sass:map";
+
 // 432px, 768px, 1024px, 1300px
 $breakpoints-up: (
   "small": "27em",
@@ -18,19 +20,19 @@ $breakpoints-height: (
 );
 
 @mixin breakpoint($size) {
-  @media (min-width: map-get($breakpoints-up, $size)) {
+  @media (min-width: map.get($breakpoints-up, $size)) {
     @content;
   }
 }
 
 @mixin breakpoint-down($size) {
-  @media (max-width: map-get($breakpoints-down, $size)) {
+  @media (max-width: map.get($breakpoints-down, $size)) {
     @content;
   }
 }
 
 @mixin breakpoint-height($size) {
-  @media (max-height: map-get($breakpoints-height, $size)) {
+  @media (max-height: map.get($breakpoints-height, $size)) {
     @content;
   }
 }

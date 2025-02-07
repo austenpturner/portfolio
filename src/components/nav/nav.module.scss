@@ -2,14 +2,14 @@
 
 .mainNav {
   @include grid-parent(auto, 1fr auto);
-  background-color: var(--light-background);
+  background-color: $light-background;
   position: absolute;
   right: rem(30);
   top: rem(20);
   z-index: 7000;
   @include breakpoint-down(medium) {
     @include grid-parent(1fr 140px 1fr, 1fr 150px 1fr);
-    background-color: var(--green);
+    background-color: $green;
     height: 24%;
     opacity: 0;
     right: 0;
@@ -48,19 +48,19 @@
         text-align: right;
       }
       a {
-        color: var(--light-text);
-        font-family: var(--font-lora);
+        color: $light-text;
+        font-family: $font-lora;
         height: rem(32);
         text-decoration: none;
         &:hover {
-          border-bottom: 1.5px solid var(--light-text);
+          border-bottom: 1.5px solid $light-text;
           font-style: italic;
           @include breakpoint(large) {
-            border-bottom: 1.5px solid var(--dark-text);
+            border-bottom: 1.5px solid $dark-text;
           }
         }
         @include breakpoint(large) {
-          color: var(--dark-text);
+          color: $dark-text;
         }
       }
     }

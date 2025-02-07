@@ -17,7 +17,7 @@
     @include grid-child(2, 2, start, center);
     h1,
     h2 {
-      color: var(--dark-text);
+      color: $dark-text;
       margin: 0;
       text-align: center;
     }

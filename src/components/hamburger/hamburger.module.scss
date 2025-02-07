@@ -3,7 +3,7 @@
 .mobileNavBtn {
   aspect-ratio: 1;
   background-color: transparent;
-  color: var(--dark-text);
+  color: $dark-text;
   padding: 0;
   position: absolute;
   top: 5px;
@@ -11,7 +11,7 @@
   width: 35px;
   z-index: 7001;
   .hamburger {
-    fill: var(--dark-background);
+    fill: $dark-text;
     .line {
       transform-origin: center;
       transition: all 300ms ease-in-out;
@@ -25,7 +25,7 @@
         y: 45;
       }
       &__top {
-        fill: var(--light-text);
+        fill: $light-text;
         transform-origin: 50% 50%;
         transform: translateY(10px) rotate(45deg);
         @include breakpoint-height(mobile) {
@@ -33,7 +33,7 @@
         }
       }
       &__bottom {
-        fill: var(--light-text);
+        fill: $light-text;
         transform-origin: 50% 50%;
         transform: translateY(-10px) rotate(-45deg);
         @include breakpoint-height(mobile) {

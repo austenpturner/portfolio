@@ -8,7 +8,7 @@
     max-width: rem(825);
   }
   .descriptionContainer {
-    color: var(--light-text);
+    color: $light-text;
     @include grid-parent(1fr, auto auto, 8px);
     @include grid-child(1, 2);
     @include breakpoint(medium) {

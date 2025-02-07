@@ -2,12 +2,12 @@
 
 h1,
 h3 {
-  font-family: var(--font-lobster);
+  font-family: $font-lobster;
   font-weight: 400;
 }
 h2,
 h4 {
-  font-family: var(--font-lora);
+  font-family: $font-lora;
   font-weight: 400;
 }
 
@@ -56,7 +56,7 @@ p,
 li,
 a,
 button {
-  font-family: var(--font-figtree);
+  font-family: $font-figtree;
 }
 
 p,

@@ -1,7 +1,7 @@
 @use "../../styles/util/" as *;
 
 .portfolio {
-  background-color: var(--green);
+  background-color: $green;
   padding: rem(20);
   @include breakpoint(medium) {
     padding: rem(30);
@@ -10,7 +10,7 @@
     padding: rem(60) 0 0;
   }
   h3 {
-    color: var(--light-text);
+    color: $light-text;
     margin: 0 auto;
     max-width: rem(1150);
   }

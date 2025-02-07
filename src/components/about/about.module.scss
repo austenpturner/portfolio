@@ -1,7 +1,7 @@
 @use "../../styles/util/" as *;
 
 .about {
-  background-color: var(--light-background);
+  background-color: $light-background;
   padding-bottom: rem(20);
   @include grid-parent(
     20px auto min(88vw, 500px),
@@ -48,9 +48,9 @@
     @include grid-child(3, 2);
     grid-column-end: 4;
     grid-row-end: 4;
-    background-color: var(--peach);
+    background-color: $peach;
     border-radius: 5px 0 0 5px;
-    color: var(--light-text);
+    color: $light-text;
     @include breakpoint(medium) {
       @include grid-parent(70px auto 70px, 40px 65px 15px auto 60px);
       grid-column-end: 5;
