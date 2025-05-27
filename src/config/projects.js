@@ -2,6 +2,8 @@ import pacificTherapyDesktop from "../assets/healthcare-mockup-screenshots/pacif
 import pacificTherapyIpad from "../assets/healthcare-mockup-screenshots/pacificTherapyiPad-OurServices.png";
 import shoppingCartDesktop from "../assets/react-shopping-cart-screenshots/reactCart-favorites.png";
 import shoppingCartIpad from "../assets/react-shopping-cart-screenshots/reactCartiPad-cart.png";
+import liveScheduleDesktop from "../assets/jim-basnight-music/liveScheduleDesktop.jpg";
+import discographyiPad from "../assets/jim-basnight-music/discographyiPad.jpg";
 
 export const projects = [
   {
@@ -16,6 +18,16 @@ export const projects = [
   },
   {
     id: 2,
+    title: "Jim Basnight Music",
+    description:
+      "Website built for local musician using Next.js and Contentful.",
+    link: "https://jimbasnightmusic.com",
+    repo: "",
+    desktopImage: liveScheduleDesktop,
+    iPadImage: discographyiPad,
+  },
+  {
+    id: 3,
     title: "Pacific Therapy",
     description:
       "An example website mockup built with React and styled with Sass.",

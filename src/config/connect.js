@@ -1,5 +1,5 @@
-import { FaCodepen, FaGithub, FaLinkedin } from "react-icons/fa";
-import { MdOutlineMail } from "react-icons/md";
+import { FaCodepen, FaGithub } from "react-icons/fa";
+// import { MdOutlineMail } from "react-icons/md";
 import { SiFrontendmentor } from "react-icons/si";
 
 const email = "austenpturner";
@@ -30,13 +30,19 @@ export const contact = [
   {
     id: 1,
     name: "Email",
-    text: "send me a message",
+    text: "send me an email",
     link: `mailto:${email}@${carrier}`,
   },
   {
     id: 2,
     name: "LinkedIn",
-    text: "find me on LinkedIn",
+    text: "connect on LinkedIn",
     link: "https://www.linkedin.com/in/austenpturner/",
+  },
+  {
+    id: 3,
+    name: "GitHub",
+    text: "find me on GitHub",
+    link: "https://github.com/austenpturner",
   },
 ];
